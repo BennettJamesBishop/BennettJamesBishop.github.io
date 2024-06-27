@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bennettjamesbishop.github.io/static/css/main.f855e6bc.css",
-    "main.js": "/bennettjamesbishop.github.io/static/js/main.70a7e392.js",
-    "static/js/453.253ccfac.chunk.js": "/bennettjamesbishop.github.io/static/js/453.253ccfac.chunk.js",
-    "index.html": "/bennettjamesbishop.github.io/index.html",
-    "main.f855e6bc.css.map": "/bennettjamesbishop.github.io/static/css/main.f855e6bc.css.map",
-    "main.70a7e392.js.map": "/bennettjamesbishop.github.io/static/js/main.70a7e392.js.map",
-    "453.253ccfac.chunk.js.map": "/bennettjamesbishop.github.io/static/js/453.253ccfac.chunk.js.map"
+    "main.css": "/static/css/main.f855e6bc.css",
+    "main.js": "/static/js/main.36c822b7.js",
+    "static/js/453.253ccfac.chunk.js": "/static/js/453.253ccfac.chunk.js",
+    "index.html": "/index.html",
+    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
+    "main.36c822b7.js.map": "/static/js/main.36c822b7.js.map",
+    "453.253ccfac.chunk.js.map": "/static/js/453.253ccfac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.70a7e392.js"
+    "static/js/main.36c822b7.js"
   ]
 }
