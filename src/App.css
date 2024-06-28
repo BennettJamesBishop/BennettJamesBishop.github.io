@@ -18,7 +18,8 @@ main {
 }
 
 .personal-photo {
-  width: 50%
+  width: 250px;
+  height: 250px,
 }
 .project-section {
   width: 80%;
@@ -43,8 +44,8 @@ main {
 }
 
 .image-gallery img {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid #ddd;
@@ -73,3 +74,24 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.ufc-display {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  width: 500px;
+  height: 500px;
+}
+
+.ufc-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

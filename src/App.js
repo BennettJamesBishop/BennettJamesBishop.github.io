@@ -15,51 +15,44 @@ function App() {
       </div>
       <main>
       <ResumeSection />
-      <Section
-          id="Machine Learning Project"
-          title="UFC Fight Prediction Machine Learning Project"
-          description="This is my machine learning project, which uses UFC dat to predict the outcome of UFC fights!"
-          images={[
-            'mlpic1.png',
-            'mlpic2.png',
-          ]}
-        />
+      <UFCProjectSection />    
         <Section
           id="Data Science UCSB"
           title="Data Science UCSB"
           description="This is my project for Data Science Club. Using Python, GIS Data, and simmulated annealing, we optimized public transport in the San Diego area."
           images={[
-            './DSUCSBProject/DCUCSB1.JPG',
-            './DSUCSBProject/DCUCSB2.JPG',
-            './DSUCSBProject/DCUCSB3.JPG'
+            `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB1.JPG`,
+            `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB2.JPG`
           ]}
         />
           <Section
           id="Brainsink"
           title="Brainsink"
-          description="This is my full stack project, Brainsink!"
+          description="This is my full stack project, Brainsink! It uses React, Apollo, AWS s3, TailwindCSS, GraphQL, RedwoodJS and OpenAI,
+           to make project management easier."
           images={[
-            './brainsink/brainsink1.png',
-            './brainsink/brainsink2.png',
+            `${process.env.PUBLIC_URL}/brainsink/brainsink1.png`,
+            `${process.env.PUBLIC_URL}/brainsink/brainsink2.png`,
           ]}
         />
         <Section
           id="The Wenliang Initiative"
           title="The Wenliang Initiative"
-          description="This is The Wenliang Initative, a non-profit grocery delivery service!"
+          description="This is The Wenliang Initative, a non-profit grocery delivery service I cofounded! My best
+           friend and I delivered over $30,000 worth of groceries to the elderly in my community, eliminating hundreds of hours of covid exposure."
           images={[
-            './wenliangInitiative/wenliang1.jpg',
-            './wenliangInitiative/wenliang2.jpg',
+            `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang1.jpg`,
+            `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang2.jpg`,
           ]}
         />
         <Section
           id="Boy Scouts of America"
           title="Boy Scouts of America"
-          description="I am an Eagle Scout! Check out some photos from my journey below."
+          description="I am an Eagle Scout! This was the leading accomplishment of years of volunterr work, leadership experience, and outdoor adventures. 
+          Check out some photos from my journey below."
           images={[
-            'https://via.placeholder.com/150',
-            'https://via.placeholder.com/150',
-            'https://via.placeholder.com/150'
+            `${process.env.PUBLIC_URL}/boyScouts/boyScouts1.jpg`,
+            `${process.env.PUBLIC_URL}/boyScouts/boyScouts2.jpg`,
           ]}
         />
       </main>
@@ -88,11 +81,24 @@ function ResumeSection() {
      <iframe title='resume' src="resume.pdf" />
     </div>
     <div> <h2>My Resume</h2>
-    <p>Take a look at my resume</p></div>
+    <p>Take a look at my resume.</p></div>
      
     </section>
   );
 }
+
+function UFCProjectSection() {
+  return (
+    <section className="ufc-section">
+     <div> <h2>Machine Learning Project</h2>
+    <p>Take a look at my Machine Learning Project. It is written in R and explores five different types machine learning models. The best model takes UFC fighter data, and predicts who will win fights with around 76% accuracy!</p></div>
+     <div >
+     <iframe className="ufc-display" title='ufc-project' src="UFC-Final-Project.html" />
+    </div> 
+    </section>
+  );
+}
+
 
 
 
