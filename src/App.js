@@ -10,7 +10,7 @@ function App() {
         Philosophy, and Technology Management. Apart from that, I am a pianist, rugby player, software developer, data analyst, and more!
         Thanks for checking out my site.</p>
        
-     <img className='personal-photo' src={'self_photo.JPG'} alt={`${'self_photo'}`} />
+     <img className='personal-photo' src={`${process.env.PUBLIC_URL}/self_photo.JPG`} alt={`${'self_photo'}`} />
       </header>
       </div>
       <main>
@@ -51,8 +51,8 @@ function App() {
           description="I am an Eagle Scout! This was the leading accomplishment of years of volunterr work, leadership experience, and outdoor adventures. 
           Check out some photos from my journey below."
           images={[
-            `${process.env.PUBLIC_URL}/boyScouts/boyScouts1.jpg`,
-            `${process.env.PUBLIC_URL}/boyScouts/boyScouts2.jpg`,
+            `${process.env.PUBLIC_URL}/boyScouts/boyScouts1.JPG`,
+            `${process.env.PUBLIC_URL}/boyScouts/boyScouts2.JPG`,
           ]}
         />
       </main>
