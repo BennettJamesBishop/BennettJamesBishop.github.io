@@ -39,7 +39,8 @@ function App() {
           id="The Wenliang Initiative"
           title="The Wenliang Initiative"
           description="This is The Wenliang Initative, a non-profit grocery delivery service I cofounded! My best
-           friend and I delivered over $30,000 worth of groceries to the elderly in my community, eliminating hundreds of hours of covid exposure."
+           friend and I delivered over $30,000 worth of groceries to the elderly in my community, eliminating hundreds of hours of covid exposure. We even made the news, check that
+            out here: https://www.ksbw.com/article/2-stevenson-students-deliver-groceries-for-free-to-their-neighbors/32023134"
           images={[
             `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang1.jpg`,
             `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang2.jpg`,
