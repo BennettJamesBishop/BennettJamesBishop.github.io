@@ -10,7 +10,7 @@ function App() {
         Philosophy, and Technology Management. Apart from that, I am a pianist, rugby player, software developer, data analyst, and more!
         Thanks for checking out my site.</p>
        
-     <img className='personal-photo' src={`${process.env.PUBLIC_URL}/self_photo.JPG`} alt={`${'self_photo'}`} />
+     <img className='personal-photo' src={`${process.env.PUBLIC_URL}/self_photo.jpg`} alt={`${'self_photo'}`} />
       </header>
       </div>
       <main>
