@@ -5,50 +5,57 @@ function App() {
     <div className="App">
     <div class='flex-row'>
       <header className="App-header">
-      <div><img className='personal-photo' src={'FamilyPic.JPG'} alt={`${'familypic'}`} /></div>
         <h1>Bennett Bishop</h1> 
         <p>Hi! My name is Bennett Bishop. I am a third year student at UC Santa Barbara studying Statistics and Data Science, 
         Philosophy, and Technology Management. Apart from that, I am a pianist, rugby player, software developer, data analyst, and more!
         Thanks for checking out my site.</p>
        
+     <img className='personal-photo' src={'self_photo.JPG'} alt={`${'self_photo'}`} />
       </header>
       </div>
       <main>
       <ResumeSection />
-        <Section
-          id="project1"
-          title="Project 1"
-          description="Description of Project 1"
+      <Section
+          id="Machine Learning Project"
+          title="UFC Fight Prediction Machine Learning Project"
+          description="This is my machine learning project, which uses UFC dat to predict the outcome of UFC fights!"
           images={[
-            'familyPic.JPG',
-            'https://via.placeholder.com/150',
-            'https://via.placeholder.com/150'
+            'mlpic1.png',
+            'mlpic2.png',
           ]}
         />
         <Section
-          id="project2"
-          title="Project 2"
-          description="Description of Project 2"
+          id="Data Science UCSB"
+          title="Data Science UCSB"
+          description="This is my project for Data Science Club. Using Python, GIS Data, and simmulated annealing, we optimized public transport in the San Diego area."
           images={[
-            'https://via.placeholder.com/150',
-            'https://via.placeholder.com/150',
-            'https://via.placeholder.com/150'
+            './DSUCSBProject/DCUCSB1.JPG',
+            './DSUCSBProject/DCUCSB2.JPG',
+            './DSUCSBProject/DCUCSB3.JPG'
+          ]}
+        />
+          <Section
+          id="Brainsink"
+          title="Brainsink"
+          description="This is my full stack project, Brainsink!"
+          images={[
+            './brainsink/brainsink1.png',
+            './brainsink/brainsink2.png',
           ]}
         />
         <Section
-          id="project3"
-          title="Project 3"
-          description="Description of Project 3"
+          id="The Wenliang Initiative"
+          title="The Wenliang Initiative"
+          description="This is The Wenliang Initative, a non-profit grocery delivery service!"
           images={[
-            'https://via.placeholder.com/150',
-            'https://via.placeholder.com/150',
-            'https://via.placeholder.com/150'
+            './wenliangInitiative/wenliang1.jpg',
+            './wenliangInitiative/wenliang2.jpg',
           ]}
         />
         <Section
-          id="project4"
-          title="Project 4"
-          description="Description of Project 4"
+          id="Boy Scouts of America"
+          title="Boy Scouts of America"
+          description="I am an Eagle Scout! Check out some photos from my journey below."
           images={[
             'https://via.placeholder.com/150',
             'https://via.placeholder.com/150',
