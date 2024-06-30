@@ -101,3 +101,7 @@ main {
     max-width: 100%; /* Take full width of its container */
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
