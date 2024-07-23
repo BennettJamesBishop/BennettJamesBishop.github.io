@@ -1,19 +1,14 @@
 import React from 'react';
 import './App.css';
+import Header from './components/header';
+import HeroSection from './components/heroSection';
+import ProjectsGrid from './components/projectsGrid';
 function App() {
   return (
     <div className="App">
-    <div class='flex-row'>
-      <header className="App-header">
-        <h1>Bennett Bishop</h1> 
-        <p>Hi! My name is Bennett Bishop. I am a third year student at UC Santa Barbara studying Statistics and Data Science, 
-        Philosophy, and Technology Management. Apart from that, I am a pianist, rugby player, software developer, data analyst, and more!
-        Thanks for checking out my site.</p>
-       
-     <img className='personal-photo' src={`${process.env.PUBLIC_URL}/self_photo.jpg`} alt={`${'self_photo'}`} />
-      </header>
-      </div>
-      <main>
+        <Header />
+        <HeroSection />
+        <ProjectsGrid />
       <ResumeSection />
       <UFCProjectSection />    
         <Section
@@ -56,7 +51,7 @@ function App() {
             `${process.env.PUBLIC_URL}/boyScouts/boyScouts2.JPG`,
           ]}
         />
-      </main>
+
     </div>
   );
 }
