@@ -7,7 +7,7 @@ import AboutMeSection from './components/aboutMeSection';
 import Footer from './components/footer';
 function App() {
   return (
-    <div className="App">
+    <div>
         <Header />
         <HeroSection />
         <ProjectsSection />
