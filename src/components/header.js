@@ -5,7 +5,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Projects', href: '#projects' },
+  { name: 'Projects', href: '#projects-section' },
   { name: 'About Me', href: '#about-me' }
 ]
 
@@ -17,7 +17,7 @@ export default function Header() {
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
         <h1 className=" text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                  BJB
+         BJB
         </h1>
         </div>
         <div className="flex lg:hidden">

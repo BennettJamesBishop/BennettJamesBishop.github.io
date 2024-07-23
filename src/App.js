@@ -1,20 +1,23 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/header';
-import HeroSection from './components/heroSection';
-import ProjectsSection from './components/projectsSection';
-import AboutMeSection from './components/aboutMeSection';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
 import Footer from './components/footer';
+import './App.css'
 function App() {
   return (
-    <div>
+    <Router>
+      <div>
         <Header />
-        <HeroSection />
-        <ProjectsSection />
-        <AboutMeSection />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects/:index" element={<Projects />} />
+        </Routes>
         <Footer />
-    </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
