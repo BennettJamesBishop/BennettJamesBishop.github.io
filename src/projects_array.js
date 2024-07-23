@@ -55,8 +55,68 @@ export const projects_array = [
     ],
     images:
       [
-        {url: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80'},
-        {url: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80'},
+        {url: `${process.env.PUBLIC_URL}/ufcApp/ufcApp1.png`},
+        {url: `${process.env.PUBLIC_URL}/ufcApp/ufcApp2.png`},
+        {url: `${process.env.PUBLIC_URL}/ufcApp/ufcApp1.png`},
+      ],
+      date: 'July 2024',
+    },
+    {
+      title: 'UFC Prediction ML Project',
+      objective:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    results: 
+    'ededededede',
+    githubLink: 'githubLink.com',
+    productionLink: 'productionLink.com',
+    tools:
+    [
+      {name: 'next', logo: 'dcc'}, {name: 'frr', logo: 'dcrc'}, {name: 'rffr', logo: 'dcsxc'}
+    ],
+    images:
+      [
+        {url: `${process.env.PUBLIC_URL}/ufcML/ufcML1.png`},
+        {url: `${process.env.PUBLIC_URL}/ufcML/ufcML2.png`},
+        {url: `${process.env.PUBLIC_URL}/ufcML/ufcML1.png`},
+      ],
+      date: 'July 2024',
+    },
+    {
+      title: 'The Wenliang Iniative',
+      objective:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    results: 
+    'ededededede',
+    githubLink: 'githubLink.com',
+    productionLink: 'productionLink.com',
+    tools:
+    [
+      {name: 'next', logo: 'dcc'}, {name: 'frr', logo: 'dcrc'}, {name: 'rffr', logo: 'dcsxc'}
+    ],
+    images:
+      [
+        {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang1.jpg`},
+        {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang2.jpg`},
+        {url:  'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80'},
+      ],
+      date: 'July 2024',
+    },
+    {
+      title: 'Eagle Scout',
+      objective:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    results: 
+    'ededededede',
+    githubLink: 'githubLink.com',
+    productionLink: 'productionLink.com',
+    tools:
+    [
+      {name: 'next', logo: 'dcc'}, {name: 'frr', logo: 'dcrc'}, {name: 'rffr', logo: 'dcsxc'}
+    ],
+    images:
+      [
+        {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts1.JPG`},
+        {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts2.JPG`},
         {url:  'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80'},
       ],
       date: 'July 2024',
