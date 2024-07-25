@@ -1,4 +1,4 @@
-import { projects_array } from "../projects_array"
+import  projects_array  from "../projects_array"
   export default function ProjectsGrid() {
     return (
       <div id='projects-section' className="bg-indigo-600 py-24 sm:py-32">

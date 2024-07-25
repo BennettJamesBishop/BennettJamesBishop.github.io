@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { projects_array } from '../projects_array';
+import { projects_array } from '../projects_array.ts';
 
 export default function Projects() {
 
@@ -46,11 +46,13 @@ export default function Projects() {
               <p className="mt-4 text-lg leading-8 text-gray-600">{project.results}</p>
             </section>
 
+          {/* Tools Section */}
+            {project.tools.length > 0 &&
             <section className="lg:col-span-1 lg:row-start-2">
               <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">Tools</h2>
               <div className="mt-4 flex flex-wrap gap-4">
                 {project.tools.map((tool, index) => (
-                  <div key={index} className="flex items-center">
+                  <div title={tool.name} key={index} className="flex items-center">
                  <img
                       alt={tool.name}
                       src={tool.logo}
@@ -60,34 +62,28 @@ export default function Projects() {
                   </div>
                 ))}
               </div>
-            </section>
+            </section>}
           </div>
 
+        {/* Links Section */}
+          {project.links.length > 0 &&
           <section className="mt-12">
             <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">Links</h2>
             <div className="mt-4 flex flex-wrap gap-4">
-              {project.githubLink && (
+              {project.links.map((link, index) => (
                 <a
-                  href={project.githubLink}
+                  id={index}
+                  href={link.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-indigo-600 hover:text-indigo-900"
                 >
-                  GitHub
+                  {link.name}
                 </a>
-              )}
-              {project.productionLink && (
-                <a
-                  href={project.productionLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 hover:text-indigo-900"
-                >
-                  Live Site
-                </a>
-              )}
+              ))}
             </div>
-          </section>
+          </section>}
+
         </div>
       </div>
         </div>
