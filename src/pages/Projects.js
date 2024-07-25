@@ -1,11 +1,13 @@
 import { useParams } from 'react-router-dom';
 import { projects_array } from '../projects_array';
+
 export default function Projects() {
+
     const { index } = useParams();
     const project = projects_array[index]
+
       return (
         <div>
-          {/* Add github link?? And link to production? And three images?  */}
           <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -49,11 +51,11 @@ export default function Projects() {
               <div className="mt-4 flex flex-wrap gap-4">
                 {project.tools.map((tool, index) => (
                   <div key={index} className="flex items-center">
-                    <img
+                 <img
                       alt={tool.name}
                       src={tool.logo}
-                      className="h-12 w-12 rounded-full bg-gray-100 object-cover mr-4"
-                    />
+                      className="h-12 w-12 "
+                    /> 
                     <span className=" sr-only text-lg leading-8 text-gray-600">{tool.name}</span>
                   </div>
                 ))}
