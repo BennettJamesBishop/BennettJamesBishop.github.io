@@ -43,7 +43,7 @@ const navigation = [
   
   export default function Footer() {
     return (
-      <footer className="bg-white">
+      <footer className="mt-4 bg-white">
         <div className="mx-auto max-w-7xl px-6 pb-12 items-center md:justify-between lg:px-8">
           <div className="flex justify-center space-x-6 md:order-2">
           <a href='mailto:bennettjamesbishop@gmail.com' className="text-gray-400 hover:text-gray-500">
