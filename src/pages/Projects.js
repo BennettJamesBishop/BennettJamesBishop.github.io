@@ -16,7 +16,6 @@ export default function Projects() {
             Learn how to grow your business with our expert advice.
           </p>
         </div>
-
                   {/* Photos Section */}
          {project.images.length > 1 &&     //All projects have at least one photo, for projects grid
         <div key={index} className="mx-auto my-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -35,34 +34,36 @@ export default function Projects() {
         </div>}
 
                   {/* Demo Section */}
-                  {project.demo !== undefined &&  (
+                  {project.demo && (
             <article className="flex my-4 items-center justify-center">
-              <div className="  w-full rounded-2xl ring-1 ring-black relative py-4">
+              <div className="  w-full rounded-2xl ring-1 ring-black relative">
               <iframe
                   title={project.demo.title}
                   src={project.demo.url}
                   width="100%"
                   height="500"
+                  className="rounded-2xl"
                 />
               </div>
             </article>
           )}
           </div>
           </div>
+          <div className="bg-white ">
 
              {/* Project Details */}
-      <div className="bg-white ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-8">
+          {project.objective && (
             <section className="lg:col-span-1">
               <h2 className="text-2xl tracking-tight text-gray-900 sm:text-4xl">Objective</h2>
               <p className="mt-4 text-lg leading-8 text-gray-600">{project.objective}</p>
-            </section>
-
+            </section>)}
+            {project.results && (
             <section className="lg:col-span-1 lg:row-span-2">
               <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">Results</h2>
               <p className="mt-4 text-lg leading-8 text-gray-600">{project.results}</p>
-            </section>
+            </section>)}
 
           {/* Tools Section */}
             {project.tools.length > 0 &&

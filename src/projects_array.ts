@@ -21,8 +21,8 @@ type Demo = {
 
 type Project = {
   title: string;
-  objective: string;
-  results: string;
+  objective?: string;
+  results?: string;
   demo?: Demo;
   tools: Tool[];
   images: Image[];
@@ -133,7 +133,7 @@ export const projects_array: Projects_Array = [
       // {url: `${process.env.PUBLIC_URL}/ufcML/ufcML3.png`}
     ],
     links: [],
-    date: 'July 2024',
+    date: 'June 2024',
   },
 
   //The Wenliang Initiative
@@ -156,7 +156,7 @@ export const projects_array: Projects_Array = [
       {name: 'Local News', link: 'https://www.ksbw.com/article/2-stevenson-students-deliver-groceries-for-free-to-their-neighbors/32023134'},
       {name: 'School Article', link: 'https://stevensonschool.org/news-features-for-td/special-delivery/'}
     ],
-    date: 'July 2024',
+    date: 'April 2020 - February 2021',
   },
 
   //Eagle Scout
@@ -176,7 +176,41 @@ export const projects_array: Projects_Array = [
     links: [
       {name: 'More Info', link: 'https://nesa.org/'},
   ],
-    date: 'July 2024',
-  }
+    date: 'December 2019',
+  },
+
+  //Descartes Paper
+  {
+    title: 'Challenging Descartes’ Distinction of Intellect and Imagination',
+    objective: undefined,
+    results: undefined,
+    demo: {
+        title: "Finding a Philosophically Naturalistic Account of Color",
+        url: `${process.env.PUBLIC_URL}/descartesPaper/descartes.pdf`,
+    },
+    tools: [],
+    images: [
+      {url: `${process.env.PUBLIC_URL}/descartesPaper/descartes.png`},
+    ],
+    links: [],
+    date: 'December 2023',
+  },
+
+    //Color Paper
+    {
+      title: 'Finding a Philosophically Naturalistic Account of Color',
+      objective: undefined,
+      results: undefined,
+      demo: {
+          title: "Finding a Philosophically Naturalistic Account of Color",
+          url: `${process.env.PUBLIC_URL}/colorPaper/color.pdf`,
+      },
+      tools: [],
+      images: [
+        {url: `${process.env.PUBLIC_URL}/colorPaper/color.png`},
+      ],
+      links: [],
+      date: 'December 2023',
+    },
 ];
   
