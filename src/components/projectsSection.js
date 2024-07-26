@@ -24,7 +24,15 @@ import { projects_array } from "../projects_array.ts"
                   <time className="mr-8">
                     {project.date}
                   </time>
+                  <div className="-ml-4 flex items-center gap-x-4">
+                  <svg viewBox="0 0 2 2" className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
+                    <circle r={1} cx={1} cy={1} />
+                  </svg>
+                  <div className="flex gap-x-2.5">
+                    {project.type}
+                  </div>
                 </div>
+              </div>
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
                   <a href={'/projects/' + index}>
                     <span className="absolute inset-0" />
