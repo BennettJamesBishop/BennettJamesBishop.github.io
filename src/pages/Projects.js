@@ -16,8 +16,24 @@ export default function Projects() {
             Learn how to grow your business with our expert advice.
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {project.images.map((image, index) => (
+
+          {/* Demo Section */}
+          {project.demo !== undefined &&  (
+            <article className="flex my-4 items-center justify-center">
+              <div className=" w-screen  rounded-2xl ring-1 ring-black relative py-4">
+                <iframe
+                  title={project.demo.title}
+                  src={project.demo.url}
+                  width="100%"
+                  height="400"
+                />
+              </div>
+            </article>
+          )}
+
+                  {/* Photos Section */}
+                  {project.images.length > 1 &&     project.images.map((image, index) => (     //All projects have at least one photo, for projects grid
+        <div className="mx-auto my-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             <article key={index} className="flex flex-col items-start justify-between">
               <div className="relative w-full">
                 <img
@@ -28,12 +44,12 @@ export default function Projects() {
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
               </div>
             </article>
-          ))}
+          </div>  ))}
+          </div>
+          </div>
 
-          </div>
-          </div>
              {/* Project Details */}
-      <div className="bg-white py-12 sm:py-16">
+      <div className="bg-white py-2 sm:py-4">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-8">
             <section className="lg:col-span-1">
@@ -87,6 +103,6 @@ export default function Projects() {
         </div>
       </div>
         </div>
-        </div>
+
      
       ); }

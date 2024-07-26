@@ -14,10 +14,16 @@ type Link = {
   link: string;
 };
 
+type Demo = {
+  title: string;
+  url: string;
+}
+
 type Project = {
   title: string;
   objective: string;
   results: string;
+  demo?: Demo;
   tools: Tool[];
   images: Image[];
   links: Link[];
@@ -29,9 +35,10 @@ type Projects_Array = Project[];
 export const projects_array: Projects_Array = [{
     title: 'Brainsink',
     objective:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur undefineda deserunt vel. Iusto corrupti dicta.',
     results: 
     'ededededede',
+    demo: undefined,
     tools: [
       {name: 'AWS', logo: `${process.env.PUBLIC_URL}/icons/AWS.png`},
       {name: 'React', logo: `${process.env.PUBLIC_URL}/icons/React.png`},
@@ -51,9 +58,10 @@ export const projects_array: Projects_Array = [{
   {
     title: 'Optimizing Public Transport',
     objective:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur undefineda deserunt vel. Iusto corrupti dicta.',
     results: 
       'ededededede',
+    demo: undefined,
     tools: [
       {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
       {name: 'Pandas', logo: `${process.env.PUBLIC_URL}/icons/Pandas.png`}
@@ -71,9 +79,13 @@ export const projects_array: Projects_Array = [{
   {
     title: 'UFC Prediction App',
     objective:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur undefineda deserunt vel. Iusto corrupti dicta.',
     results: 
       'ededededede',
+    demo: {
+      title: "UFC Prediction App",
+      url: 'ufcprediction.streamlit.app',
+    },
     tools: [
       {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
       {name: 'Streamlit', logo: `${process.env.PUBLIC_URL}/icons/Streamlit.png`},
@@ -94,18 +106,22 @@ export const projects_array: Projects_Array = [{
   {
     title: 'UFC Prediction ML Project',
     objective:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur undefineda deserunt vel. Iusto corrupti dicta.',
     results: 
       'ededededede',
+    demo: {
+        title: "UFC Prediction ML Project",
+        url: `${process.env.PUBLIC_URL}/ufcML/UFC-Final-Project.html`,
+    },
     tools: [
       {name: 'R', logo: `${process.env.PUBLIC_URL}/icons/R.png`},
       {name: 'RStudio', logo: `${process.env.PUBLIC_URL}/icons/RStudio.png`},
       {name: 'Kaggle', logo: `${process.env.PUBLIC_URL}/icons/Kaggle.png`}
     ],
     images: [
-      {url: `${process.env.PUBLIC_URL}/ufcML/ufcML1.png`},
+      // {url: `${process.env.PUBLIC_URL}/ufcML/ufcML1.png`},
       {url: `${process.env.PUBLIC_URL}/ufcML/ufcML2.png`},
-      {url: `${process.env.PUBLIC_URL}/ufcML/ufcML1.png`}
+      // {url: `${process.env.PUBLIC_URL}/ufcML/ufcML3.png`}
     ],
     links: [],
     date: 'July 2024',
@@ -113,9 +129,10 @@ export const projects_array: Projects_Array = [{
   {
     title: 'The Wenliang Initiative',
     objective:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur undefineda deserunt vel. Iusto corrupti dicta.',
     results: 
       'ededededede',
+    demo: undefined,
     tools: [
       {name: 'Google', logo: `${process.env.PUBLIC_URL}/icons/Google.png`}
     ],
@@ -133,9 +150,10 @@ export const projects_array: Projects_Array = [{
   {
     title: 'Eagle Scout',
     objective:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur undefineda deserunt vel. Iusto corrupti dicta.',
     results: 
       'ededededede',
+    demo: undefined,
     tools: [],
     images: [
       {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts1.JPG`},
