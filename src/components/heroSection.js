@@ -1,5 +1,3 @@
-import { ChevronRightIcon } from '@heroicons/react/20/solid'
-
 export default function HeroSection() {
   return (
     <div className="bg-white">
@@ -35,7 +33,7 @@ export default function HeroSection() {
               className="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 md:-mr-20 lg:-mr-36"
               aria-hidden="true"
             />
-                        <div className="shadow-lg md:rounded-3xl">
+              <div className="shadow-lg md:rounded-3xl">
               <div className="bg-indigo-500 [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
                 <div
                   className="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-indigo-100 opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36"
