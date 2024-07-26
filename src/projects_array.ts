@@ -32,7 +32,10 @@ type Project = {
 
 type Projects_Array = Project[];
 
-export const projects_array: Projects_Array = [{
+export const projects_array: Projects_Array = [
+  
+  //Brainsink
+  {
     title: 'Brainsink',
     objective:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur undefineda deserunt vel. Iusto corrupti dicta.',
@@ -55,6 +58,8 @@ export const projects_array: Projects_Array = [{
     links: [],
     date: 'Jul 2023 - Present',
   },
+
+  //Public Transport Project
   {
     title: 'Optimizing Public Transport',
     objective:
@@ -76,6 +81,8 @@ export const projects_array: Projects_Array = [{
     ],
     date: 'Sep 2022 - May 2023',
   },
+
+  //UFC App
   {
     title: 'UFC Prediction App',
     objective:
@@ -84,7 +91,7 @@ export const projects_array: Projects_Array = [{
       'ededededede',
     demo: {
       title: "UFC Prediction App",
-      url: 'ufcprediction.streamlit.app',
+      url: 'https://ufcprediction.streamlit.app/?embedded=true',
     },
     tools: [
       {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
@@ -94,8 +101,8 @@ export const projects_array: Projects_Array = [{
     ],
     images: [
       {url: `${process.env.PUBLIC_URL}/ufcApp/ufcApp1.png`},
-      {url: `${process.env.PUBLIC_URL}/ufcApp/ufcApp2.png`},
-      {url: `${process.env.PUBLIC_URL}/ufcApp/ufcApp3.png`}
+      // {url: `${process.env.PUBLIC_URL}/ufcApp/ufcApp2.png`},
+      // {url: `${process.env.PUBLIC_URL}/ufcApp/ufcApp3.png`}
     ],
     links: [
       {name: 'Github', link: 'https://github.com/BennettJamesBishop/UFC-Prediction-App'},
@@ -103,6 +110,8 @@ export const projects_array: Projects_Array = [{
     ],
     date: 'July 2024',
   },
+
+  //UFC ML Project
   {
     title: 'UFC Prediction ML Project',
     objective:
@@ -126,6 +135,8 @@ export const projects_array: Projects_Array = [{
     links: [],
     date: 'July 2024',
   },
+
+  //The Wenliang Initiative
   {
     title: 'The Wenliang Initiative',
     objective:
@@ -147,6 +158,8 @@ export const projects_array: Projects_Array = [{
     ],
     date: 'July 2024',
   },
+
+  //Eagle Scout
   {
     title: 'Eagle Scout',
     objective:

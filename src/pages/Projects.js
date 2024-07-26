@@ -7,7 +7,7 @@ export default function Projects() {
     const project = projects_array[index]
 
       return (
-        <div>
+        <div >
           <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -17,23 +17,10 @@ export default function Projects() {
           </p>
         </div>
 
-          {/* Demo Section */}
-          {project.demo !== undefined &&  (
-            <article className="flex my-4 items-center justify-center">
-              <div className=" w-screen  rounded-2xl ring-1 ring-black relative py-4">
-                <iframe
-                  title={project.demo.title}
-                  src={project.demo.url}
-                  width="100%"
-                  height="400"
-                />
-              </div>
-            </article>
-          )}
-
                   {/* Photos Section */}
-                  {project.images.length > 1 &&     project.images.map((image, index) => (     //All projects have at least one photo, for projects grid
-        <div className="mx-auto my-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+         {project.images.length > 1 &&     //All projects have at least one photo, for projects grid
+        <div key={index} className="mx-auto my-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        {project.images.map((image, index) => ( 
             <article key={index} className="flex flex-col items-start justify-between">
               <div className="relative w-full">
                 <img
@@ -44,12 +31,27 @@ export default function Projects() {
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
               </div>
             </article>
-          </div>  ))}
+        ))}
+        </div>}
+
+                  {/* Demo Section */}
+                  {project.demo !== undefined &&  (
+            <article className="flex my-4 items-center justify-center">
+              <div className="  w-full rounded-2xl ring-1 ring-black relative py-4">
+              <iframe
+                  title={project.demo.title}
+                  src={project.demo.url}
+                  width="100%"
+                  height="500"
+                />
+              </div>
+            </article>
+          )}
           </div>
           </div>
 
              {/* Project Details */}
-      <div className="bg-white py-2 sm:py-4">
+      <div className="bg-white ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-8">
             <section className="lg:col-span-1">
@@ -68,7 +70,7 @@ export default function Projects() {
               <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">Tools</h2>
               <div className="mt-4 flex flex-wrap gap-4">
                 {project.tools.map((tool, index) => (
-                  <div title={tool.name} key={index} className="flex items-center">
+                  <div key={index} title={tool.name} className="flex items-center">
                  <img
                       alt={tool.name}
                       src={tool.logo}
@@ -81,6 +83,7 @@ export default function Projects() {
             </section>}
           </div>
 
+          
         {/* Links Section */}
           {project.links.length > 0 &&
           <section className="mt-12">
@@ -88,7 +91,7 @@ export default function Projects() {
             <div className="mt-4 flex flex-wrap gap-4">
               {project.links.map((link, index) => (
                 <a
-                  id={index}
+                  key={index}
                   href={link.link}
                   target="_blank"
                   rel="noopener noreferrer"
