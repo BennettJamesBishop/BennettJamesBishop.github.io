@@ -6,9 +6,9 @@ import AboutMeSection from '../components/aboutMeSection';
 const Home = () =>{
     return (
       <div>
-          <HeroSection />
-          <ProjectsSection />
-          <AboutMeSection />
+        <HeroSection />
+        <ProjectsSection />
+        <AboutMeSection />
       </div>
     );
   }

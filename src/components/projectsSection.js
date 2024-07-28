@@ -2,7 +2,7 @@ import { projects_array } from "../projects_array.ts"
 
   export default function ProjectsGrid() {
     return (
-      <div id='projects-section' className="bg-indigo-600 py-24 sm:py-32">
+      <div id="projects-section" className="bg-indigo-600 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl"> My Projects</h2>
@@ -34,7 +34,7 @@ import { projects_array } from "../projects_array.ts"
                 </div>
               </div>
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                  <a href={'/projects/' + index}>
+                  <a href={'#/projects/' + index}>
                     <span className="absolute inset-0" />
                     {project.title}
                   </a>
