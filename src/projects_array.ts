@@ -80,7 +80,7 @@ export const projects_array: Projects_Array = [
     images: [
       {url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB1.JPG`},
       {url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB2.JPG`},
-      {url: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80'}
+      {url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB3.png`}
     ],
     links: [
       {name: 'Github', link: 'https://github.com/BennettJamesBishop/SDPublicTransportProject'},
@@ -156,7 +156,7 @@ export const projects_array: Projects_Array = [
     images: [
       {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang1.jpg`},
       {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang2.jpg`},
-      {url: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80'}
+      {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang3.png`},
     ],
     links: [
       {name: 'Local News', link: 'https://www.ksbw.com/article/2-stevenson-students-deliver-groceries-for-free-to-their-neighbors/32023134'},
@@ -179,7 +179,7 @@ export const projects_array: Projects_Array = [
     images: [
       {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts1.JPG`},
       {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts2.JPG`},
-      {url: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80'}
+      {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts3.JPG`},
     ],
     links: [
       {name: 'More Info', link: 'https://nesa.org/'},
