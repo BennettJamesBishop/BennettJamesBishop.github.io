@@ -72,15 +72,16 @@ export const projects_array: Projects_Array = [
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur undefineda deserunt vel. Iusto corrupti dicta.',
     results: 
       'ededededede',
-    demo: undefined,
+      demo: {
+        title: "Public Transport Project",
+        url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB-Presentation.pdf`,
+      },
     tools: [
       {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
       {name: 'Pandas', logo: `${process.env.PUBLIC_URL}/icons/Pandas.png`}
     ],
     images: [
       {url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB1.JPG`},
-      {url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB2.JPG`},
-      {url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB3.png`}
     ],
     links: [
       {name: 'Github', link: 'https://github.com/BennettJamesBishop/SDPublicTransportProject'},
