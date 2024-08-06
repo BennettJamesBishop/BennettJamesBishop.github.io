@@ -19,7 +19,7 @@ export default function AboutMeSection() {
                 <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
                   <img
                     alt=""
-                    src={`${process.env.PUBLIC_URL}/aboutMe/ab1.jpg`}
+                    src={`${process.env.PUBLIC_URL}/aboutMe/ab1.JPG`}
                     className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                   />
                 </div>
