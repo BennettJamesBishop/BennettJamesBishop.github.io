@@ -7,12 +7,10 @@ export default function AboutMeSection() {
               <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Me</h2>
                 <p className="mt-6 text-xl leading-8 text-gray-600">
-                  Quasi est quaerat. Sit molestiae et. Provident ad dolorem occaecati eos iste. Soluta rerum quidem
-                  minus ut molestiae velit error quod. Excepturi quidem expedita molestias quas.
+                Hi, I'm Bennett! Welcome to my personal website. I am currently a student at UCSB, but I am also much more than that. In highschool, I joined just about every band and orchestra I could. I’ve performed multiple times at the Monterey Jazz Festival (playing Trombone) and even flew to New York and performed at Carnegie Hall (playing Euphonium)! Since coming to college, I have broadened my horizons and have played for the school's D1 Rugby team, taught myself to program full stack applications, spent many sunny days on the beach, and slowly figured out how to get better grades (4.0 GPA last quarter)!
                 </p>
                 <p className="mt-6 text-base leading-7 text-gray-600">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                  amet fugiat veniam occaecat fugiat. Quasi aperiam sit non sit neque reprehenderit.
+                I'm now a fourth year student pursuing degrees in Statistics and Data Science & Philosophy, as well as a certificate in Technology Management. My academic work ranges from Thomas Bayes to Reneé Descartes, and I am fortunate enough to find it all (varying degrees of) interesting. I find the most interest in Web Development, Machine Learning, and Metaphysics. Thanks for checking out my portfolio, enjoy! 
                 </p>
               </div>
               <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
