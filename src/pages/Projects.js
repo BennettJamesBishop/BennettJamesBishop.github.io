@@ -62,7 +62,8 @@ export default function Projects() {
             {project.results && (
             <section className="mt-4 lg:mt-0 lg:col-span-1 lg:row-span-2">
               <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">Results</h2>
-              <p className="mt-4 text-lg leading-8 text-gray-600">{project.results}</p>
+              {project.results.map((result, index) => (
+              <p id={index} className="indent-8 mt-4 text-lg leading-8 text-gray-600">{result.paragraph}</p>))}
             </section>)}
 
           {/* Tools Section */}
