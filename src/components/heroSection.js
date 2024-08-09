@@ -11,7 +11,7 @@ export default function HeroSection() {
                   Bennett James Bishop 
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Student, Full Stack Software Engineer, Data Analyst.
+                  Student, Full Stack Software Engineer, Data Scientist.
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
