@@ -172,12 +172,14 @@ export const projects_array: Projects_Array = [
       {paragraph: 'The Wenliang Initiative started as a response to the challenges faced by the elderly in my community during the pandemic. I co-founded a nonprofit grocery delivery service aimed at reducing COVID-19 exposure risks by ensuring safe access to essential items. Over time, we successfully delivered groceries to more than 100 unique households, translating to over 350 hours of potential exposure avoided and distributing more than $30,000 worth of groceries. To facilitate the process, I designed and implemented a user-friendly website (in my pre-SWE days, so I used Wix!), streamlining the ordering system. Twice a week, my best friend and I would print out pages of grocery lists and set out on hours-long delivery operations. As demand grew, I scaled the service by recruiting and managing a team of dedicated volunteers, which was an incredibly rewarding experience. We even ended up on the news (link below)!'},
       {paragraph: 'I am very proud of my quarantine project, and learned valuable lessons about logistics, public relations, and the importance of community because of it.'},
     ],
-    demo: undefined,
+    demo: {
+      title: 'Local News Article',
+      url: 'https://stevensonschool.org/news-features-for-td/special-delivery/'},
     tools: [],
     images: [
-      {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang1.jpg`},
+      // {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang1.jpg`},
       {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang2.jpg`},
-      {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang3.png`},
+      // {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang3.png`},
     ],
     links: [
       {name: 'Local News', link: 'https://www.ksbw.com/article/2-stevenson-students-deliver-groceries-for-free-to-their-neighbors/32023134'},
