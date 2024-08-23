@@ -44,9 +44,9 @@ export const projects_array: Projects_Array = [
   //Brainsink
   {
     title: 'Brainsink',
-    subtitle: 'Full stack project for project collaboration.',
+    subtitle: 'Full stack project for project collaboration. *Live Site Coming Soon*',
     type: 'Full Stack SWE Project',
-    objective: 'deded',
+    objective: 'This full stack application aims to be a one stop shop for construction project management.',
     results: [
       {paragraph: 'A friend of mine presented an idea for a full-stack SWE project in order to solve a problem he had been facing. While renovating his house, he\'d had problems communicating with the designers, contractors, and structural engineers. He would be on the receiving end of an email containing a 40 page PDF, filled with tile samples or blueprints. It was hard to communicate about specific parts of the PDF, and eventually, a number of his requests were never met. This birthed the idea of Brainsink, a SaaS designed to enhance collaboration in construction projects.'}, 
       {paragraph: 'Brainsink now features an teammate invitation system using the Resend mailer API, shared \'project\' spaces to share and annotate documents, conversation summaries via the OpenAI API, and a settings page in which users may customize their profile. I engineered full-stack solutions and unit testing for 20+ dynamic pages, 25+ complex components, and 30+ mutations and queries. This app is built on a stack of React, TypeScript, GraphQL, PostgreSQL, Prisma, and RedwoodJS.'},
@@ -64,7 +64,7 @@ export const projects_array: Projects_Array = [
     images: [
       {url: `${process.env.PUBLIC_URL}/brainsink/brainsink1.png`},
       {url: `${process.env.PUBLIC_URL}/brainsink/brainsink2.png`},
-      {url: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80'}
+      {url: `${process.env.PUBLIC_URL}/brainsink/brainsink1.png`}
     ],
     links: [],
     date: 'July 2023 - Present',
