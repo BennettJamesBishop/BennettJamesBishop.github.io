@@ -162,55 +162,55 @@ export const projects_array: Projects_Array = [
   },
 
   //The Wenliang Initiative
-  {
-    title: 'The Wenliang Initiative',
-    subtitle: 'Non-Profit Grocery Delivery service I co-founded with my best friend during Covid.',
-    type: 'Non-Profit Service',
-    objective:
-      'Help the elderly population of my community avoid COVID exposure by creating a Non-Profit Grocery Delivery Service.',
-    results: [
-      {paragraph: 'The Wenliang Initiative started as a response to the challenges faced by the elderly in my community during the pandemic. I co-founded a nonprofit grocery delivery service aimed at reducing COVID-19 exposure risks by ensuring safe access to essential items. Over time, we successfully delivered groceries to more than 100 unique households, translating to over 350 hours of potential exposure avoided and distributing more than $30,000 worth of groceries. To facilitate the process, I designed and implemented a user-friendly website (in my pre-SWE days, so I used Wix!), streamlining the ordering system. Twice a week, my best friend and I would print out pages of grocery lists and set out on hours-long delivery operations. As demand grew, I scaled the service by recruiting and managing a team of dedicated volunteers, which was an incredibly rewarding experience. We even ended up on the news (link below)!'},
-      {paragraph: 'I am very proud of my quarantine project, and learned valuable lessons about logistics, public relations, and the importance of community because of it.'},
-    ],
-    demo: {
-      title: 'Local News Article',
-      url: 'https://stevensonschool.org/news-features-for-td/special-delivery/'},
-    tools: [],
-    images: [
-      // {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang1.jpg`},
-      {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang2.jpg`},
-      // {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang3.png`},
-    ],
-    links: [
-      {name: 'Local News', link: 'https://www.ksbw.com/article/2-stevenson-students-deliver-groceries-for-free-to-their-neighbors/32023134'},
-      {name: 'School Article', link: 'https://stevensonschool.org/news-features-for-td/special-delivery/'}
-    ],
-    date: 'April 2020 - Feb 2021',
-  },
+  // {
+  //   title: 'The Wenliang Initiative',
+  //   subtitle: 'Non-Profit Grocery Delivery service I co-founded with my best friend during Covid.',
+  //   type: 'Non-Profit Service',
+  //   objective:
+  //     'Help the elderly population of my community avoid COVID exposure by creating a Non-Profit Grocery Delivery Service.',
+  //   results: [
+  //     {paragraph: 'The Wenliang Initiative started as a response to the challenges faced by the elderly in my community during the pandemic. I co-founded a nonprofit grocery delivery service aimed at reducing COVID-19 exposure risks by ensuring safe access to essential items. Over time, we successfully delivered groceries to more than 100 unique households, translating to over 350 hours of potential exposure avoided and distributing more than $30,000 worth of groceries. To facilitate the process, I designed and implemented a user-friendly website (in my pre-SWE days, so I used Wix!), streamlining the ordering system. Twice a week, my best friend and I would print out pages of grocery lists and set out on hours-long delivery operations. As demand grew, I scaled the service by recruiting and managing a team of dedicated volunteers, which was an incredibly rewarding experience. We even ended up on the news (link below)!'},
+  //     {paragraph: 'I am very proud of my quarantine project, and learned valuable lessons about logistics, public relations, and the importance of community because of it.'},
+  //   ],
+  //   demo: {
+  //     title: 'Local News Article',
+  //     url: 'https://stevensonschool.org/news-features-for-td/special-delivery/'},
+  //   tools: [],
+  //   images: [
+  //     // {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang1.jpg`},
+  //     {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang2.jpg`},
+  //     // {url: `${process.env.PUBLIC_URL}/wenliangInitiative/wenliang3.png`},
+  //   ],
+  //   links: [
+  //     {name: 'Local News', link: 'https://www.ksbw.com/article/2-stevenson-students-deliver-groceries-for-free-to-their-neighbors/32023134'},
+  //     {name: 'School Article', link: 'https://stevensonschool.org/news-features-for-td/special-delivery/'}
+  //   ],
+  //   date: 'April 2020 - Feb 2021',
+  // },
 
-  //Eagle Scout
-  {
-    title: 'Eagle Scout',
-    subtitle: 'After a life time of scouting, I achieved the rank of Eagle Scout at age 16.',
-    type: 'Boy Scouts of America',
-    objective:
-      'When I first started the scouting process, as a \'Little Scout Buddy,\' years before I could even officially join, I did not have any objectives. I simply wanted to do everything my older brother was doing.',
-    results: [
-      {paragraph: 'Achieving the rank of Eagle Scout at the age of 16 was a culmination of over a decade of dedication and perseverance within the Boy Scouts. This journey was filled with countless meetings, exhilarating camping trips, challenging backpacking adventures, and enriching summer camps which shaped me profoundly. I am incredibly grateful to the Boy Scouts of America for the handful of unforgettable experiences they provided, allowing me to spend hundreds of days and nights immersed in the great outdoors, pushing myself beyond my comfort zone.'},
-      {paragraph: 'This journey afforded me invaluable leadership experience, with hundreds of hours dedicated to honing my skills. From meticulously planning camping trips to leading my troop through impactful community service projects, each opportunity helped me grow. The Boy Scouts instilled in me a deep sense of discipline, accountability, and respect for others. These experiences have left a lasting impact on my life, equipping me with skills and values that continue to guide me in all my endeavors.'},
-    ],
-    demo: undefined,
-    tools: [],
-    images: [
-      {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts1.JPG`},
-      {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts2.JPG`},
-      {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts3.JPG`},
-    ],
-    links: [
-      {name: 'More Info', link: 'https://nesa.org/'},
-  ],
-    date: 'Dec 2019',
-  },
+  // //Eagle Scout
+  // {
+  //   title: 'Eagle Scout',
+  //   subtitle: 'After a life time of scouting, I achieved the rank of Eagle Scout at age 16.',
+  //   type: 'Boy Scouts of America',
+  //   objective:
+  //     'When I first started the scouting process, as a \'Little Scout Buddy,\' years before I could even officially join, I did not have any objectives. I simply wanted to do everything my older brother was doing.',
+  //   results: [
+  //     {paragraph: 'Achieving the rank of Eagle Scout at the age of 16 was a culmination of over a decade of dedication and perseverance within the Boy Scouts. This journey was filled with countless meetings, exhilarating camping trips, challenging backpacking adventures, and enriching summer camps which shaped me profoundly. I am incredibly grateful to the Boy Scouts of America for the handful of unforgettable experiences they provided, allowing me to spend hundreds of days and nights immersed in the great outdoors, pushing myself beyond my comfort zone.'},
+  //     {paragraph: 'This journey afforded me invaluable leadership experience, with hundreds of hours dedicated to honing my skills. From meticulously planning camping trips to leading my troop through impactful community service projects, each opportunity helped me grow. The Boy Scouts instilled in me a deep sense of discipline, accountability, and respect for others. These experiences have left a lasting impact on my life, equipping me with skills and values that continue to guide me in all my endeavors.'},
+  //   ],
+  //   demo: undefined,
+  //   tools: [],
+  //   images: [
+  //     {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts1.JPG`},
+  //     {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts2.JPG`},
+  //     {url: `${process.env.PUBLIC_URL}/boyScouts/boyScouts3.JPG`},
+  //   ],
+  //   links: [
+  //     {name: 'More Info', link: 'https://nesa.org/'},
+  // ],
+  //   date: 'Dec 2019',
+  // },
 
   //Descartes Paper
   {
