@@ -44,7 +44,7 @@ export const projects_array: Projects_Array = [
   //Brainsink
   {
     title: 'Brainsink',
-    subtitle: 'Full stack project for project collaboration. *Live Site Coming Soon*',
+    subtitle: 'Full stack project for project collaboration. Check it out! https://www.brainsink.xyz',
     type: 'Full Stack SWE Project',
     objective: 'This full stack application aims to be a one stop shop for construction project management.',
     results: [
@@ -63,8 +63,8 @@ export const projects_array: Projects_Array = [
     ],
     images: [
       {url: `${process.env.PUBLIC_URL}/brainsink/brainsink1.png`},
-      {url: `${process.env.PUBLIC_URL}/brainsink/brainsink2.png`},
-      {url: `${process.env.PUBLIC_URL}/brainsink/brainsink1.png`}
+      // {url: `${process.env.PUBLIC_URL}/brainsink/brainsink2.png`},
+      // {url: `${process.env.PUBLIC_URL}/brainsink/brainsink1.png`}
     ],
     links: [],
     date: 'July 2023 - Present',
