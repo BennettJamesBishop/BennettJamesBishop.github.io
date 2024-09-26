@@ -67,34 +67,40 @@ export const projects_array: Projects_Array = [
     date: 'July 2023 - Present',
   },
 
-  //Public Transport Project
-  {
-    title: 'Optimizing Public Transport',
-    subtitle: '1st place project at Data Science UCSB Project Showcase 2023.',
-    type: 'Data Science Project',
-    objective:
-      'My team and I united with the goal of building a system to optimize urban area\'s public transportation. Optimization in this case means redistributing public transit resources to better serve overpopulated, low income neighborhoods. We worked on this project intermittently throughout the 2022-2023 school year.',
-    results: [
-      {paragraph: 'Using GIS Data, Public Census Data, and Python, our team successfully reoptimized public transportation for San Diego county! Using simulated annealing techniques, we were able to redistribute the total number of stops in order to better serve neighborhoods with higher population density and lower average income. Then, we repurposed open source code meant to solve the Travelling Salesman Problem, and were able to find the shortest routes for buses to travel in between stops. With a new distribution of stops and new routes, we found a solution which would take San Diego\'s current public transportation resources and more appropriately serve underserved neighborhoods.'},
-      {paragraph: 'Our project was awarded First Place at the 2023 Spring Project Showcase, outperforming 26 competing projects and highlighting our project\'s tangible potential to help underserved communities.'},
-    ],
-    demo: {
-        title: "Public Transport Project",
-        url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB-Poster.pdf`,
+    //UFC App
+    {
+      title: 'UFC Prediction App',
+      subtitle: 'Python app using Machine Learning to predict the outcome of UFC Fights.',
+      type: 'Machine Learning App',
+      objective:
+        'My UFC ML Project (featured on my personal site, as well) was really fun to build, however I wanted to do more with my model. I became invested in creating an interactive app in which a user could match up two fighters and recieve both a calculated prediction of who would win as well as an AI generated explanation of the model\'s prediction.',
+      results: 
+        [
+          {paragraph: 'It turns out I had already completed the real heavy work throughout the process of the original UFC ML Project. In order to create this app, I rewrote my most successful model from my UFC ML Project in Python (it was originally written in R), found a second data set containing fighter data, and utilized Streamlit.io in order to build/host the app.'},
+          {paragraph: 'The app itself is pretty simple. The two drop down menus contain unique fighter names, corresponding to individual rows in the fighters data set. When a user presses “Predict Winner,” a data frame containing each fighter\'s data is passed into my ML Model, my model then returns a prediction as well as each fighter\'s probability of winning.'},
+          {paragraph: 'Next, each fighter\'s name and data, as well as the predicted winner, is passed to an OpenAI API. With the help of some prompt engineering (including variable importance rankings from the model), a meaningful explanation as to the model\'s prediction is generated.'},
+          {paragraph: 'I am happy with how this app has turned out, and plan on using Streamlit for more apps in the future. I also plan on building a pipeline which will rescrape the UFC website more frequently, providing more data for the model to train itself on.'},
+        ],
+      demo: {
+        title: "UFC Prediction App",
+        url: 'https://ufcprediction.streamlit.app/?embedded=true',
+      },
+      tools: [
+        {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
+        {name: 'Streamlit', logo: `${process.env.PUBLIC_URL}/icons/Streamlit.png`},
+        {name: 'Scikit-Learn', logo: `${process.env.PUBLIC_URL}/icons/scikit-learn.png`},
+        {name: 'Pandas', logo: `${process.env.PUBLIC_URL}/icons/Pandas.png`}
+      ],
+      images: [
+        {url: `${process.env.PUBLIC_URL}/ufcApp/ufcApp1.png`},
+      ],
+      links: [
+        {name: 'Github', link: 'https://github.com/BennettJamesBishop/UFC-Prediction-App'},
+        {name: 'Live Site', link: 'https://ufcprediction.streamlit.app/'},
+      ],
+      date: 'July 2024',
     },
-    tools: [
-      {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
-      {name: 'Pandas', logo: `${process.env.PUBLIC_URL}/icons/Pandas.png`}
-    ],
-    images: [
-      {url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB1.png`},
-    ],
-    links: [
-      {name: 'Github', link: 'https://github.com/BennettJamesBishop/SDPublicTransportProject'},
-    ],
-    date: 'Oct 2022 - May 2023',
-  },
-
+    
     //UFC ML Project
     {
       title: 'UFC Prediction ML Project',
@@ -122,39 +128,33 @@ export const projects_array: Projects_Array = [
       date: 'June 2024',
     },
 
-  //UFC App
-  {
-    title: 'UFC Prediction App',
-    subtitle: 'Python app using Machine Learning to predict the outcome of UFC Fights.',
-    type: 'Machine Learning App',
-    objective:
-      'My UFC ML Project (featured on my personal site, as well) was really fun to build, however I wanted to do more with my model. I became invested in creating an interactive app in which a user could match up two fighters and recieve both a calculated prediction of who would win as well as an AI generated explanation of the model\'s prediction.',
-    results: 
-      [
-        {paragraph: 'It turns out I had already completed the real heavy work throughout the process of the original UFC ML Project. In order to create this app, I rewrote my most successful model from my UFC ML Project in Python (it was originally written in R), found a second data set containing fighter data, and utilized Streamlit.io in order to build/host the app.'},
-        {paragraph: 'The app itself is pretty simple. The two drop down menus contain unique fighter names, corresponding to individual rows in the fighters data set. When a user presses “Predict Winner,” a data frame containing each fighter\'s data is passed into my ML Model, my model then returns a prediction as well as each fighter\'s probability of winning.'},
-        {paragraph: 'Next, each fighter\'s name and data, as well as the predicted winner, is passed to an OpenAI API. With the help of some prompt engineering (including variable importance rankings from the model), a meaningful explanation as to the model\'s prediction is generated.'},
-        {paragraph: 'I am happy with how this app has turned out, and plan on using Streamlit for more apps in the future. I also plan on building a pipeline which will rescrape the UFC website more frequently, providing more data for the model to train itself on.'},
+    //Public Transport Project
+    {
+      title: 'Optimizing Public Transport',
+      subtitle: '1st place project at Data Science UCSB Project Showcase 2023.',
+      type: 'Data Science Project',
+      objective:
+        'My team and I united with the goal of building a system to optimize urban area\'s public transportation. Optimization in this case means redistributing public transit resources to better serve overpopulated, low income neighborhoods. We worked on this project intermittently throughout the 2022-2023 school year.',
+      results: [
+        {paragraph: 'Using GIS Data, Public Census Data, and Python, our team successfully reoptimized public transportation for San Diego county! Using simulated annealing techniques, we were able to redistribute the total number of stops in order to better serve neighborhoods with higher population density and lower average income. Then, we repurposed open source code meant to solve the Travelling Salesman Problem, and were able to find the shortest routes for buses to travel in between stops. With a new distribution of stops and new routes, we found a solution which would take San Diego\'s current public transportation resources and more appropriately serve underserved neighborhoods.'},
+        {paragraph: 'Our project was awarded First Place at the 2023 Spring Project Showcase, outperforming 26 competing projects and highlighting our project\'s tangible potential to help underserved communities.'},
       ],
-    demo: {
-      title: "UFC Prediction App",
-      url: 'https://ufcprediction.streamlit.app/?embedded=true',
+      demo: {
+          title: "Public Transport Project",
+          url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB-Poster.pdf`,
+      },
+      tools: [
+        {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
+        {name: 'Pandas', logo: `${process.env.PUBLIC_URL}/icons/Pandas.png`}
+      ],
+      images: [
+        {url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB1.png`},
+      ],
+      links: [
+        {name: 'Github', link: 'https://github.com/BennettJamesBishop/SDPublicTransportProject'},
+      ],
+      date: 'Oct 2022 - May 2023',
     },
-    tools: [
-      {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
-      {name: 'Streamlit', logo: `${process.env.PUBLIC_URL}/icons/Streamlit.png`},
-      {name: 'Scikit-Learn', logo: `${process.env.PUBLIC_URL}/icons/scikit-learn.png`},
-      {name: 'Pandas', logo: `${process.env.PUBLIC_URL}/icons/Pandas.png`}
-    ],
-    images: [
-      {url: `${process.env.PUBLIC_URL}/ufcApp/ufcApp1.png`},
-    ],
-    links: [
-      {name: 'Github', link: 'https://github.com/BennettJamesBishop/UFC-Prediction-App'},
-      {name: 'Live Site', link: 'https://ufcprediction.streamlit.app/'},
-    ],
-    date: 'July 2024',
-  },
 
   //Descartes Paper
   {
