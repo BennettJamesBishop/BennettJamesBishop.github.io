@@ -44,7 +44,7 @@ export const projects_array: Projects_Array = [
   //Brainsink
   {
     title: 'Brainsink',
-    subtitle: 'Full stack project for project collaboration.',
+    subtitle: 'Full stack project for project collaboration. Got too expensive to host, finding a new solution.',
     type: 'Full Stack SWE Project',
     objective:  'A friend of mine presented an idea for a full-stack SWE project in order to solve a problem he had been facing. While renovating his house, he\'d had problems communicating with the designers, contractors, and structural engineers. He would be on the receiving end of an email containing a 40 page PDF, filled with tile samples or blueprints. It was hard to communicate about specific parts of the PDF, and eventually, a number of his requests were never met. This birthed the idea of Brainsink, a SaaS designed to enhance collaboration in construction projects.',
     results: [
