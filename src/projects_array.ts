@@ -157,41 +157,41 @@ export const projects_array: Projects_Array = [
     },
 
   //Descartes Paper
-  {
-    title: 'Challenging Descartes\' Distinction of Intellect and Imagination',
-    subtitle: 'This paper challenges the success of Descartes claim that the intellect and the imagination are entirely seperate powers. .',
-    type: 'Philosophy Paper',
-    objective: undefined,
-    results: undefined,
-    demo: {
-        title: "Finding a Philosophically Naturalistic Account of Color",
-        url: `${process.env.PUBLIC_URL}/descartesPaper/descartes.pdf`,
-    },
-    tools: [],
-    images: [
-      {url: `${process.env.PUBLIC_URL}/descartesPaper/descartes.png`},
-    ],
-    links: [],
-    date: 'Dec 2023',
-  },
+  // {
+  //   title: 'Challenging Descartes\' Distinction of Intellect and Imagination',
+  //   subtitle: 'This paper challenges the success of Descartes claim that the intellect and the imagination are entirely seperate powers. .',
+  //   type: 'Philosophy Paper',
+  //   objective: undefined,
+  //   results: undefined,
+  //   demo: {
+  //       title: "Finding a Philosophically Naturalistic Account of Color",
+  //       url: `${process.env.PUBLIC_URL}/descartesPaper/descartes.pdf`,
+  //   },
+  //   tools: [],
+  //   images: [
+  //     {url: `${process.env.PUBLIC_URL}/descartesPaper/descartes.png`},
+  //   ],
+  //   links: [],
+  //   date: 'Dec 2023',
+  // },
 
-    //Color Paper
-    {
-      title: 'Finding a Philosophically Naturalistic Account of Color',
-      subtitle: 'This paper explores various philisophical theories of color, searching for one which may be most backed by science..',
-      type: 'Philosophy Paper',
-      objective: undefined,
-      results: undefined,
-      demo: {
-          title: "Finding a Philosophically Naturalistic Account of Color",
-          url: `${process.env.PUBLIC_URL}/colorPaper/color.pdf`,
-      },
-      tools: [],
-      images: [
-        {url: `${process.env.PUBLIC_URL}/colorPaper/color.png`},
-      ],
-      links: [],
-      date: 'Dec 2023',
-    },
+  //   //Color Paper
+  //   {
+  //     title: 'Finding a Philosophically Naturalistic Account of Color',
+  //     subtitle: 'This paper explores various philisophical theories of color, searching for one which may be most backed by science..',
+  //     type: 'Philosophy Paper',
+  //     objective: undefined,
+  //     results: undefined,
+  //     demo: {
+  //         title: "Finding a Philosophically Naturalistic Account of Color",
+  //         url: `${process.env.PUBLIC_URL}/colorPaper/color.pdf`,
+  //     },
+  //     tools: [],
+  //     images: [
+  //       {url: `${process.env.PUBLIC_URL}/colorPaper/color.png`},
+  //     ],
+  //     links: [],
+  //     date: 'Dec 2023',
+  //   },
 ];
   
