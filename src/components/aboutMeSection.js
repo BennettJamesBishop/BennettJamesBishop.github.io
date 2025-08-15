@@ -7,11 +7,14 @@ export default function AboutMeSection() {
               <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Me</h2>
                 <p className="mt-6 text-xl leading-8 text-gray-600">
-                Hi, I'm Bennett! Welcome to my personal website. I am currently a student at UCSB, but I am also much more than that. In highschool, I joined just about every band and orchestra I could. I’ve performed multiple times at the Monterey Jazz Festival (playing Trombone) and even flew to New York and performed at Carnegie Hall (playing Euphonium)! Since coming to college, I have broadened my horizons and have played for the school's D1 Rugby team, taught myself to program full stack applications, spent many sunny days on the beach, and slowly figured out how to get better grades (4.0 GPA last quarter)!
+                Hi, I'm Bennett! I am a recent UCSB graduate, currently continuing my work at the UCSB “Big Bee” Lab. At the lab, I’ve built a multimodal entomology chatbot by indexing their massive database of text, image, and tabular data. At the UCSB Alumni Association, I automated hundreds of hours of manual data processing, enabling time for more strategic initiatives. I also built and deployed a full-stack, AI-assisted document sharing app called Brainsink. Before then, I got my start in 2022 helping Amotions AI migrate their no-code platform to a modern web stack and secure their first client.
                 </p>
-                <p className="mt-6 text-base leading-7 text-gray-600">
-                I'm now a fourth year student pursuing degrees in Statistics and Data Science & Philosophy, as well as a certificate in Technology Management. My academic work ranges from Thomas Bayes to Reneé Descartes, and I am fortunate enough to find it all (varying degrees of) interesting. I find the most interest in Web Development, Machine Learning, and Metaphysics. Thanks for checking out my portfolio, enjoy! 
-                </p>
+                 <p className="mt-6 text-base leading-7 text-gray-600">
+                {/*I'm recently completed my degrees in Statistics and Data Science & Philosophy, as well as a certificate in Technology Management. My academic work ranged from Thomas Bayes to Reneé Descartes, and I am fortunate enough to find it all (varying degrees of) interesting. I find the most interest in Web Development, Machine Learning, and Metaphysics. Thanks for checking out my portfolio, enjoy! */}
+                Apart from studying SWE, ML, and AI, I do other cool stuff, too! I’ve played Trombone at the Monterey Jazz Festival and played Euphonium at Carnegie Hall! I played D1 Rugby at UCSB, and last year my grandpa and I flew a single engine plane down to Mexico! I also enjoy fishing, basketball, and piano. Thanks for checking out my portfolio!
+
+                </p> 
+
               </div>
               <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
                 <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
