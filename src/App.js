@@ -12,7 +12,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects/:index" element={<Projects />} />
+          {/* <Route path="/projects/:index" element={<Projects />} /> */}
         </Routes>
         <ScrollToTop />
         <Footer />
