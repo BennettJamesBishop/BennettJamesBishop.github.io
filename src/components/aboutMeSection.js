@@ -11,7 +11,7 @@ export default function AboutMeSection() {
                 </p>
                  <p className="mt-6 text-base leading-7 text-gray-600">
                 {/*I'm recently completed my degrees in Statistics and Data Science & Philosophy, as well as a certificate in Technology Management. My academic work ranged from Thomas Bayes to Reneé Descartes, and I am fortunate enough to find it all (varying degrees of) interesting. I find the most interest in Web Development, Machine Learning, and Metaphysics. Thanks for checking out my portfolio, enjoy! */}
-                Apart from studying SWE, ML, and AI, I do other cool stuff, too! I’ve played Trombone at the Monterey Jazz Festival and played Euphonium at Carnegie Hall! I played D1 Rugby at UCSB, and last year my grandpa and I flew a single engine plane down to Mexico! I also enjoy fishing, basketball, and piano. Thanks for checking out my portfolio!
+                Apart from studying SWE, ML, and AI, I do other cool stuff, too! I'm a proud Eagle Scout. I’ve played Trombone at the Monterey Jazz Festival and played Euphonium at Carnegie Hall! I played D1 Rugby at UCSB, and last year my grandpa and I flew a single engine plane down to Mexico! I enjoy fishing, basketball, and piano. Thanks for checking out my portfolio!
 
                 </p> 
 
