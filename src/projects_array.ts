@@ -40,7 +40,75 @@ type Project = {
 type Projects_Array = Project[];
 
 export const projects_array: Projects_Array = [
-  
+
+  //ChatGBeeT
+  {
+    title: 'ChatGBeeT',
+    subtitle: 'AI-powered chatbot for bee specimen identification and entomological research.',
+    type: 'AI / NLP Project',
+    objective: 'As part of my work at the UCSB Big Bee Lab, I built ChatGBeeT, an AI-powered chatbot designed to assist researchers and enthusiasts with bee specimen identification. The goal was to leverage large language models to make entomological knowledge more accessible and to streamline the identification process for lab members working with large specimen collections.',
+    results: [
+      {paragraph: 'ChatGBeeT integrates a large language model with domain-specific knowledge about bee taxonomy, morphology, and geographic distribution. Users can describe physical characteristics of a specimen or upload images, and the chatbot provides identification suggestions along with relevant taxonomic information and confidence levels.'},
+      {paragraph: 'The tool has been used internally at the Big Bee Lab to assist with cataloging and identification workflows, reducing the time researchers spend on preliminary specimen classification.'},
+    ],
+    demo: undefined,
+    tools: [
+      {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
+      {name: 'React', logo: `${process.env.PUBLIC_URL}/icons/React.png`},
+      {name: 'AWS', logo: `${process.env.PUBLIC_URL}/icons/AWS.png`},
+    ],
+    images: [
+      {url: `${process.env.PUBLIC_URL}/chatgbeet/chatgbeet1.png`},
+    ],
+    links: [],
+    date: '2025',
+  },
+
+  //IV Pizza Pub CV Model
+  {
+    title: 'IV Pizza Pub CV Model',
+    subtitle: 'Computer vision model for real-time object detection at a local Isla Vista restaurant.',
+    type: 'Computer Vision Project',
+    objective: 'I developed a computer vision model for IV Pizza Pub, a popular restaurant in Isla Vista near the UCSB campus. The project aimed to use object detection to automate and improve operational workflows at the restaurant, such as identifying menu items, monitoring order fulfillment, or tracking inventory visually.',
+    results: [
+      {paragraph: 'The CV model was trained on a custom dataset of images specific to the restaurant\'s menu items and operational environment. Using transfer learning techniques, the model achieved reliable detection accuracy for the target object classes.'},
+      {paragraph: 'This project was a great opportunity to apply computer vision techniques to a real-world, local business use case, bridging the gap between academic ML knowledge and practical deployment.'},
+    ],
+    demo: undefined,
+    tools: [
+      {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
+      {name: 'Google', logo: `${process.env.PUBLIC_URL}/icons/Google.png`},
+    ],
+    images: [
+      {url: `${process.env.PUBLIC_URL}/ivpizzapub/ivpizzapub1.png`},
+    ],
+    links: [],
+    date: '2025',
+  },
+
+  //Internal Employee Request Text Classifier
+  {
+    title: 'Internal Employee Request Text Classifier',
+    subtitle: 'NLP text classification model for routing and categorizing internal employee requests.',
+    type: 'Machine Learning Project',
+    objective: 'I built a text classification system designed to automatically categorize and route internal employee requests. The goal was to reduce manual triage time by using natural language processing to understand the intent of incoming requests and assign them to the appropriate department or workflow.',
+    results: [
+      {paragraph: 'The classifier was trained on historical employee request data, using techniques such as TF-IDF vectorization and supervised learning models to categorize requests into predefined categories. The model was evaluated against a held-out test set and achieved strong precision and recall across the target classes.'},
+      {paragraph: 'By automating the initial classification step, the system significantly reduced the manual overhead involved in processing employee requests, allowing teams to focus on resolution rather than triage.'},
+    ],
+    demo: undefined,
+    tools: [
+      {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
+      {name: 'Scikit-Learn', logo: `${process.env.PUBLIC_URL}/icons/scikit-learn.png`},
+      {name: 'Pandas', logo: `${process.env.PUBLIC_URL}/icons/Pandas.png`},
+    ],
+    images: [
+      {url: `${process.env.PUBLIC_URL}/textclassifier/textclassifier1.png`},
+    ],
+    links: [],
+    date: '2024',
+  },
+
   //Brainsink
   {
     title: 'Brainsink',
