@@ -40,7 +40,79 @@ type Project = {
 type Projects_Array = Project[];
 
 export const projects_array: Projects_Array = [
-  
+
+  //ChatGBeeT
+  {
+    title: 'ChatGBeeT',
+    subtitle: 'A multimodal RAG chatbot for entomology research at the UCSB Big Bee Lab.',
+    type: 'AI / NLP Project',
+    objective: 'The UCSB Big Bee Lab houses thousands of pages of domain-specific entomology literature, along with vast image and tabular datasets. Researchers needed a way to quickly query this knowledge base without manually sifting through documents. I set out to build a multimodal RAG chatbot that could understand and retrieve information across text, images, and structured data.',
+    results: [
+      {paragraph: 'Saved an estimated 2000 person-years in taxonomy research by indexing thousands of pages of domain-specific literature. I architected a multimodal RAG chatbot using LangChain, GPT-4, CLIP embeddings, and a Qdrant vector database.'},
+      {paragraph: 'Beyond the technical work, I mentored a team of 5 researchers, teaching fundamentals of NLP and information retrieval to both the team and lab directors.'},
+    ],
+    demo: {
+      title: "ChatGBeeT Poster Presentation",
+      url: `${process.env.PUBLIC_URL}/chatGBeeT/CHAT G-BEE-T Poster Presentation.pdf`,
+    },
+    tools: [
+      {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
+      {name: 'React', logo: `${process.env.PUBLIC_URL}/icons/React.png`},
+    ],
+    images: [
+      {url: `${process.env.PUBLIC_URL}/chatGBeeT/chatGBeeT.jpeg`},
+    ],
+    links: [],
+    date: 'Jan 2025 - Jun 2025',
+  },
+
+  //IV Pizza Pub CV Model
+  {
+    title: 'IV Pizza Pub Computer Vision Model',
+    subtitle: 'A CV model to detect and classify pizza types from security footage for a high-traffic pizzeria.',
+    type: 'Computer Vision Project',
+    objective: 'A high-traffic pizzeria was losing an estimated ~$50,000 in annual revenue due to customers leaving when their preferred pizza slices were unavailable. I trained a computer vision model to detect and classify 12 pizza types from existing security camera footage, providing real-time inventory awareness.',
+    results: [
+      {paragraph: 'Trained a CV model to detect and classify 12 pizza types from security footage, offering a solution to the pizzeria\'s significant revenue loss from slice unavailability.'},
+      {paragraph: 'Planned a full pipeline for data collection, labeling, training, and UX design to position the model for production use.'},
+    ],
+    demo: {
+      title: "IV Pizza Pub Pizza Identifier Notebook",
+      url: `${process.env.PUBLIC_URL}/pizzaPub/IV_Pizza_Pub.html`,
+    },
+    tools: [
+      {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
+    ],
+    images: [
+      {url: `${process.env.PUBLIC_URL}/pizzaPub/IV_Pizza_pub.jpeg`},
+    ],
+    links: [],
+    date: 'Jan 2025 - Apr 2025',
+  },
+
+  //Deep Learning Certificate
+  {
+    title: 'Deep Learning Specialization Certificate',
+    subtitle: 'Completed the DeepLearning.AI Deep Learning Specialization.',
+    type: 'Certificate',
+    objective: 'Completed the Deep Learning Specialization to build a strong foundation in neural networks, CNNs, RNNs, and sequence models.',
+    results: [
+      {paragraph: 'Earned the Deep Learning Specialization certificate, covering neural network architectures, optimization techniques, convolutional networks, recurrent networks, and sequence models.'},
+    ],
+    demo: {
+      title: "Deep Learning Specialization Certificate",
+      url: `${process.env.PUBLIC_URL}/certificate/Deep Learning Specialization Certificate.pdf`,
+    },
+    tools: [
+      {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
+    ],
+    images: [
+      {url: `${process.env.PUBLIC_URL}/certificate/deep_learning_certificate.jpeg`},
+    ],
+    links: [],
+    date: '2024',
+  },
+
   //Brainsink
   {
     title: 'Brainsink',
@@ -64,7 +136,7 @@ export const projects_array: Projects_Array = [
       {url: `${process.env.PUBLIC_URL}/brainsink/brainsink1.png`},
     ],
     links: [],
-    date: 'July 2023 - Present',
+    date: 'Jun 2023 - Nov 2024',
   },
 
     //UFC App
