@@ -5,8 +5,8 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Projects', href: '/#projects-section' },
-  { name: 'About Me', href: '/#about-me' }
+  { name: 'About Me', href: '/#about-me' },
+  { name: 'Projects', href: '/#projects-section' }
 ]
 
 export default function Header() {
