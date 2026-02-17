@@ -95,7 +95,7 @@ export default function Projects() {
                   href={link.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-indigo-600 hover:text-indigo-900"
+                  className="text-blue-600 hover:text-blue-900"
                 >
                   {link.name}
                 </a>
