@@ -8,7 +8,7 @@ export default function ProjectsGrid() {
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"> My Projects</h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
-              Find my projects below. If you see one you like, click on it to get more information
+              Find projects I've worked on below. If you see one you like, click on it to get more information
             </p>
           </div>
 

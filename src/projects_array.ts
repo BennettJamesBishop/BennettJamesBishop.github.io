@@ -87,7 +87,7 @@ export const projects_array: Projects_Array = [
       {url: `${process.env.PUBLIC_URL}/pizzaPub/IV_Pizza_pub.jpeg`},
     ],
     links: [],
-    date: 'Jan 2025 - Apr 2025',
+    date: 'Apr 2025',
   },
 
   //Deep Learning Certificate
