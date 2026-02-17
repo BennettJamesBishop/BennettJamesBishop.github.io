@@ -45,7 +45,7 @@ export const projects_array: Projects_Array = [
   {
     title: 'ChatGBeeT',
     subtitle: 'A multimodal RAG chatbot for entomology research at the UCSB Big Bee Lab.',
-    type: 'AI / NLP Project',
+    type: 'RAG Chatbot',
     objective: 'The UCSB Big Bee Lab houses thousands of pages of domain-specific entomology literature, along with vast image and tabular datasets. Researchers needed a way to quickly query this knowledge base without manually sifting through documents. I set out to build a multimodal RAG chatbot that could understand and retrieve information across text, images, and structured data.',
     results: [
       {paragraph: 'Saved an estimated 2000 person-years in taxonomy research by indexing thousands of pages of domain-specific literature. I architected a multimodal RAG chatbot using LangChain, GPT-4, CLIP embeddings, and a Qdrant vector database.'},
