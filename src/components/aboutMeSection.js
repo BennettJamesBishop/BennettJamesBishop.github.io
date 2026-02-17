@@ -7,11 +7,11 @@ export default function AboutMeSection() {
               <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Me</h2>
                 <p className="mt-6 text-xl leading-8 text-gray-600">
-                Hi, I'm Bennett! I am a recent UCSB graduate, currently continuing my work at the UCSB “Big Bee” Lab. At the lab, I’ve built a multimodal entomology chatbot by indexing their massive database of text, image, and tabular data. At the UCSB Alumni Association, I automated hundreds of hours of manual data processing, enabling time for more strategic initiatives. I also built and deployed a full-stack, AI-assisted document sharing app called Brainsink. Before then, I got my start in 2022 helping Amotions AI migrate their no-code platform to a modern web stack and secure their first client.
+                Hi, I'm Bennett! I'm an AI Engineer in San Francisco, most recently working for a startup building AI agents for FP&A. I'm in charge of building new agents, maintaining evals, and building various add-ins to make our agents more accessible. I'm a recent UCSB graduate who previously worked at the UCSB "Big Bee" Lab, where I built a multimodal entomology chatbot by indexing their massive database of text, image, and tabular data. At the UCSB Alumni Association, I automated hundreds of hours of manual data processing, enabling time for more strategic initiatives. I also built and deployed a full-stack, AI-assisted document sharing app called Brainsink. Before then, I got my start in 2022 helping Amotions AI migrate their no-code platform to a modern web stack and secure their first client.
                 </p>
                  <p className="mt-6 text-base leading-7 text-gray-600">
                 {/*I'm recently completed my degrees in Statistics and Data Science & Philosophy, as well as a certificate in Technology Management. My academic work ranged from Thomas Bayes to Reneé Descartes, and I am fortunate enough to find it all (varying degrees of) interesting. I find the most interest in Web Development, Machine Learning, and Metaphysics. Thanks for checking out my portfolio, enjoy! */}
-                Apart from studying SWE, ML, and AI, I do other cool stuff, too! I'm a proud Eagle Scout. I’ve played Trombone at the Monterey Jazz Festival and played Euphonium at Carnegie Hall! I played D1 Rugby at UCSB, and last year my grandpa and I flew a single engine plane down to Mexico! I enjoy fishing, basketball, and piano. Thanks for checking out my portfolio!
+                Apart from studying SWE, ML, and AI, I do other cool stuff, too! This summer, I rode a motorcycle 200 miles around Vietnam.  I'm a proud Eagle Scout. I've played Trombone at the Monterey Jazz Festival and played Euphonium at Carnegie Hall. I played D1 Rugby at UCSB, and last year my grandpa and I flew a single engine plane down to Mexico! I enjoy fishing, basketball, and piano. Thanks for checking out my site!
 
                 </p> 
 
@@ -42,7 +42,7 @@ export default function AboutMeSection() {
                   <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                     <img
                       alt=""
-                      src={`${process.env.PUBLIC_URL}/aboutMe/grandpa_pic.JPG`}
+                      src={`${process.env.PUBLIC_URL}/aboutMe/vietnam_pic.JPG`}
                       className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                     />
                   </div>
