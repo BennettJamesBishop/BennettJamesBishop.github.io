@@ -7,8 +7,8 @@ const Home = () =>{
     return (
       <div>
         <HeroSection />
-        <ProjectsSection />
         <AboutMeSection />
+        <ProjectsSection />
       </div>
     );
   }
