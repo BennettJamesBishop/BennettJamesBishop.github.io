@@ -25,11 +25,13 @@ type Demo = {
 }
 
 type Project = {
+  slug: string;
   title: string;
   subtitle: string;
   type: string;
   objective?: string;
   results?: Result[];
+  metric?: string;
   demo?: Demo;
   tools: Tool[];
   images: Image[];
@@ -43,6 +45,7 @@ export const projects_array: Projects_Array = [
 
   //ChatGBeeT
   {
+    slug: 'chatgbeet',
     title: 'ChatGBeeT',
     subtitle: 'A multimodal RAG chatbot for entomology research at the UCSB Big Bee Lab.',
     type: 'RAG Chatbot',
@@ -51,6 +54,7 @@ export const projects_array: Projects_Array = [
       {paragraph: 'Saved an estimated 2000 person-years in taxonomy research by indexing thousands of pages of domain-specific literature. I architected a multimodal RAG chatbot using LangChain, GPT-4, CLIP embeddings, and a Qdrant vector database.'},
       {paragraph: 'Beyond the technical work, I mentored a team of 5 researchers, teaching fundamentals of NLP and information retrieval to both the team and lab directors.'},
     ],
+    metric: 'saved an estimated 2,000 person-years in taxonomy research',
     demo: {
       title: "ChatGBeeT Poster Presentation",
       url: `${process.env.PUBLIC_URL}/chatGBeeT/CHAT G-BEE-T Poster Presentation.pdf`,
@@ -68,6 +72,7 @@ export const projects_array: Projects_Array = [
 
   //IV Pizza Pub CV Model
   {
+    slug: 'iv-pizza-cv',
     title: 'IV Pizza Pub Computer Vision Model',
     subtitle: 'A CV model to detect and classify pizza types from security footage for a high-traffic pizzeria.',
     type: 'Computer Vision Project',
@@ -76,6 +81,7 @@ export const projects_array: Projects_Array = [
       {paragraph: 'Trained a CV model to detect and classify 12 pizza types from security footage, offering a solution to the pizzeria\'s significant revenue loss from slice unavailability.'},
       {paragraph: 'Planned a full pipeline for data collection, labeling, training, and UX design to position the model for production use.'},
     ],
+    metric: 'recovered ~$50k/yr in lost revenue from slice unavailability',
     demo: {
       title: "IV Pizza Pub Pizza Identifier Notebook",
       url: `${process.env.PUBLIC_URL}/pizzaPub/IV_Pizza_Pub.html`,
@@ -92,6 +98,7 @@ export const projects_array: Projects_Array = [
 
   //Deep Learning Certificate
   {
+    slug: 'deep-learning',
     title: 'Deep Learning Specialization Certificate',
     subtitle: 'Completed the DeepLearning.AI Deep Learning Specialization.',
     type: 'Certificate',
@@ -115,6 +122,7 @@ export const projects_array: Projects_Array = [
 
   //Brainsink
   {
+    slug: 'brainsink',
     title: 'Brainsink',
     subtitle: 'Full stack project for project collaboration. Got too expensive to host, finding a new solution.',
     type: 'Full Stack SWE Project',
@@ -123,6 +131,7 @@ export const projects_array: Projects_Array = [
       {paragraph: 'Brainsink now features an teammate invitation system using the Resend mailer API, shared \'project\' spaces to share and annotate documents, conversation summaries via the OpenAI API, and a settings page in which users may customize their profile. I engineered full-stack solutions and unit testing for 20+ dynamic pages, 25+ complex components, and 30+ mutations and queries. This app is built on a stack of React, TypeScript, GraphQL, PostgreSQL, Prisma, and RedwoodJS.'},
       {paragraph: 'This project taught me most of what I know about full-stack web development. Although I had previously held a position as a SWE Intern, this massive project forced me to problem solve and push the boundaries of what I thought I could do. I\'ll always be grateful for Brainsink and the ways it challenged me as a full stack engineer.'},
     ],
+    metric: 'shipped 20+ dynamic pages, 25+ components, 30+ mutations/queries',
     demo: undefined,
     tools: [
       {name: 'AWS', logo: `${process.env.PUBLIC_URL}/icons/AWS.png`},
@@ -141,6 +150,7 @@ export const projects_array: Projects_Array = [
 
     //UFC App
     {
+      slug: 'ufc-app',
       title: 'UFC Prediction App',
       subtitle: 'Python app using Machine Learning to predict the outcome of UFC Fights.',
       type: 'Machine Learning App',
@@ -175,6 +185,7 @@ export const projects_array: Projects_Array = [
     
     //UFC ML Project
     {
+      slug: 'ufc-ml',
       title: 'UFC Prediction ML Project',
       subtitle: 'R Project using Machine Learning to predict the outcome of UFC Fights.',
       type: 'Machine Learning Project',
@@ -184,6 +195,7 @@ export const projects_array: Projects_Array = [
         {paragraph: ' I found a large data set with all of the relevant data, and decided to get to work. Over the course of the ten week period, I experimented with various machine learning models (Logistic Regression, Linear Discriminant Analysis, Decision Trees, Random Forests, and K-Nearest Neighbors), eventually finding the best model (based off of its ROC_AUC metric).'},
         {paragraph: 'This ML project laid the foundation for the interactive UFC Fight Prediction app I built using Python. Visit my Projects page to try it out!'},
       ],
+      metric: 'ROC_AUC ≈ 0.80, test accuracy ≈ 75%',
       demo: {
           title: "UFC Prediction ML Project",
           url: `${process.env.PUBLIC_URL}/ufcML/UFC-Final-Project.html`,
@@ -202,6 +214,7 @@ export const projects_array: Projects_Array = [
 
     //Public Transport Project
     {
+      slug: 'public-transport',
       title: 'Optimizing Public Transport',
       subtitle: '1st place project at Data Science UCSB Project Showcase 2023.',
       type: 'Data Science Project',
@@ -211,6 +224,7 @@ export const projects_array: Projects_Array = [
         {paragraph: 'Using GIS Data, Public Census Data, and Python, our team successfully reoptimized public transportation for San Diego county! Using simulated annealing techniques, we were able to redistribute the total number of stops in order to better serve neighborhoods with higher population density and lower average income. Then, we repurposed open source code meant to solve the Travelling Salesman Problem, and were able to find the shortest routes for buses to travel in between stops. With a new distribution of stops and new routes, we found a solution which would take San Diego\'s current public transportation resources and more appropriately serve underserved neighborhoods.'},
         {paragraph: 'Our project was awarded First Place at the 2023 Spring Project Showcase, outperforming 26 competing projects and highlighting our project\'s tangible potential to help underserved communities.'},
       ],
+      metric: '1st place · UCSB Data Science Project Showcase (out of 27)',
       demo: {
           title: "Public Transport Project",
           url: `${process.env.PUBLIC_URL}/DSUCSBProject/DSUCSB-Poster.pdf`,

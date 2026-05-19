@@ -1,111 +1,227 @@
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { projects_array } from '../projects_array.ts';
 
+function hostnameOf(url) {
+  try { return new URL(url).hostname; } catch { return null; }
+}
+
+function sectionNumberer() {
+  let n = 0;
+  return () => String(++n).padStart(2, '0');
+}
+
 export default function Projects() {
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  const [lightboxSrc, setLightboxSrc] = useState(null);
 
-    const { index } = useParams();
-    const project = projects_array[index]
+  const index = projects_array.findIndex((p) => p.slug === slug);
+  const project = index >= 0 ? projects_array[index] : null;
 
-      return (
-        <div >
-          <div className="bg-white py-8 sm:py-10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{project.title}</h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
-            {project.subtitle}
-          </p>
-        </div>
-                  {/* Photos Section */}
-         {project.images.length > 1 &&     //All projects have at least one photo, for projects grid
-        <div key={index} className="mx-auto my-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        {project.images.map((image, index) => ( 
-            <article key={index} className="flex flex-col items-start justify-between">
-              <div className="relative w-full">
-                <img
-                  alt=""
-                  src={image.url}
-                  className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-                />
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
-              </div>
-            </article>
-        ))}
-        </div>}
+  useEffect(() => {
+    if (!project) navigate('/', { replace: true });
+  }, [project, navigate]);
 
-                  {/* Demo Section */}
-                  {project.demo && (
-            <article className="flex my-4 items-center justify-center">
-              <div className="  w-full rounded-2xl ring-1 ring-black relative">
-              <iframe
-                  title={project.demo.title}
-                  src={project.demo.url}
-                  width="100%"
-                  height="500"
-                  className="rounded-2xl"
-                />
-              </div>
-            </article>
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setLightboxSrc(null);
+  }, [slug]);
+
+  useEffect(() => {
+    if (!lightboxSrc) return;
+    const onKey = (e) => { if (e.key === 'Escape') setLightboxSrc(null); };
+    document.addEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [lightboxSrc]);
+
+  if (!project) return null;
+
+  const prev = index > 0 ? projects_array[index - 1] : null;
+  const next = index < projects_array.length - 1 ? projects_array[index + 1] : null;
+  const num = sectionNumberer();
+
+  const demoIsPdf = project.demo && /\.pdf(\?|$|#)/i.test(project.demo.url);
+
+  return (
+    <main className="t-wrap">
+      <nav className="t-crumb" aria-label="Breadcrumb">
+        <Link to="/">~</Link>
+        <span className="sep">/</span>
+        <Link to="/#projects-section">projects</Link>
+        <span className="sep">/</span>
+        <span className="here">{project.slug}</span>
+      </nav>
+
+      <header className="t-project-head">
+        <h1>{project.title}</h1>
+        <p className="t-subtitle">{project.subtitle}</p>
+        <div className="t-project-meta">
+          <div className="field"><span className="k">date</span><span className="v">{project.date}</span></div>
+          <span className="sep-dot">·</span>
+          <div className="field"><span className="k">type</span><span className="v">{project.type}</span></div>
+          {project.metric && (
+            <>
+              <span className="sep-dot">·</span>
+              <div className="field"><span className="k">status</span><span className="v green">shipped</span></div>
+            </>
           )}
-          </div>
-          </div>
-        
-
-             {/* Project Details */}
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-8">
-          {project.objective && (
-            <section className="lg:col-span-1">
-              <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">Objective</h2>
-              <p className="mt-4 text-lg leading-8 text-gray-600">{project.objective}</p>
-            </section>)}
-            {project.results && (
-            <section className="mt-4 lg:mt-0 lg:col-span-1 lg:row-span-2">
-              <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">Results</h2>
-              {project.results.map((result, index) => (
-              <p key={index} className="indent-8 mt-4 text-lg leading-8 text-gray-600">{result.paragraph}</p>))}
-            </section>)}
-
-          {/* Tools Section */}
-            {project.tools.length > 0 &&
-            <section className="mt-4 lg:mt-0 lg:col-span-1 lg:row-start-2">
-              <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">Tools</h2>
-              <div className="mt-4 flex flex-wrap gap-4">
-                {project.tools.map((tool, index) => (
-                  <div key={index} title={tool.name} className="flex items-center">
-                 <img
-                      alt={tool.name}
-                      src={tool.logo}
-                      className="h-12 w-12 "
-                    /> 
-                    <span className=" sr-only text-lg leading-8 text-gray-600">{tool.name}</span>
-                  </div>
-                ))}
-              </div>
-            </section>}
-       
-        {/* Links Section */}
-          {project.links.length > 0 &&
-          <section className="mt-4 lg:mt-0">
-            <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">Links</h2>
-            <div className="mt-4 flex flex-wrap gap-4">
-              {project.links.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-900"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-          </section>}
-          </div>
         </div>
-      </div>
-       
+      </header>
 
-     
-      ); }
+      {project.images.length > 0 && (
+        <button
+          type="button"
+          className="t-img-expandable"
+          onClick={() => setLightboxSrc(project.images[0].url)}
+          aria-label={`Expand ${project.title} screenshot`}
+        >
+          <div
+            className="t-hero-img"
+            style={{ backgroundImage: `url(${project.images[0].url})` }}
+            role="img"
+            aria-label={`${project.title} screenshot`}
+          />
+          <span className="t-img-hint" aria-hidden="true">[ ⤢ expand ]</span>
+        </button>
+      )}
+
+      {project.images.length > 1 && (
+        <div className="t-gallery">
+          {project.images.slice(1).map((img, i) => (
+            <button
+              type="button"
+              key={i}
+              className="t-img-expandable"
+              onClick={() => setLightboxSrc(img.url)}
+              aria-label={`Expand ${project.title} additional screenshot ${i + 2}`}
+            >
+              <div
+                className="t-gallery-frame"
+                style={{ backgroundImage: `url(${img.url})` }}
+                role="img"
+                aria-label={`${project.title} additional screenshot ${i + 2}`}
+              />
+              <span className="t-img-hint" aria-hidden="true">[ ⤢ ]</span>
+            </button>
+          ))}
+        </div>
+      )}
+
+      {project.objective && (
+        <>
+          <div className="t-section-head"><span className="n">{num()}</span> objective</div>
+          <div className="t-prose">
+            <p>{project.objective}</p>
+          </div>
+        </>
+      )}
+
+      {project.results && project.results.length > 0 && (
+        <>
+          <div className="t-section-head"><span className="n">{num()}</span> results</div>
+          <div className="t-prose">
+            {project.metric && <div className="t-callout">{project.metric}</div>}
+            {project.results.map((r, i) => (
+              <p key={i}>{r.paragraph}</p>
+            ))}
+          </div>
+        </>
+      )}
+
+      {project.tools.length > 0 && (
+        <>
+          <div className="t-section-head"><span className="n">{num()}</span> stack</div>
+          <div className="t-stack">
+            {project.tools.map((t) => (
+              <span className="chip" key={t.name}>{t.name}</span>
+            ))}
+          </div>
+        </>
+      )}
+
+      {project.demo && (
+        <>
+          <div className="t-section-head"><span className="n">{num()}</span> demo</div>
+          {demoIsPdf ? (
+            <div className="t-demo-card">
+              <div className="t-demo-name">{project.demo.title}</div>
+              <a className="t-demo-go" href={project.demo.url} target="_blank" rel="noopener noreferrer">open pdf →</a>
+            </div>
+          ) : (
+            <iframe
+              className="t-demo-iframe"
+              title={project.demo.title}
+              src={project.demo.url}
+              loading="lazy"
+            />
+          )}
+        </>
+      )}
+
+      {project.links.length > 0 && (
+        <>
+          <div className="t-section-head"><span className="n">{num()}</span> links</div>
+          <div className="t-links-list">
+            {project.links.map((link) => {
+              const host = hostnameOf(link.link);
+              return (
+                <a key={link.link} href={link.link} target="_blank" rel="noopener noreferrer">
+                  {link.name}
+                  {host && <span className="host">{host}</span>}
+                </a>
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      <nav className="t-pager" aria-label="Project navigation">
+        {prev ? (
+          <Link className="prev" to={`/projects/${prev.slug}`}>
+            <div className="t-pager-label">prev</div>
+            <div className="t-pager-title">{prev.title}</div>
+          </Link>
+        ) : <div className="placeholder" />}
+        {next ? (
+          <Link className="next" to={`/projects/${next.slug}`}>
+            <div className="t-pager-label">next</div>
+            <div className="t-pager-title">{next.title}</div>
+          </Link>
+        ) : <div className="placeholder" />}
+      </nav>
+
+      <div className="t-back">
+        <Link to="/#projects-section">back to projects</Link>
+      </div>
+
+      {lightboxSrc && (
+        <div
+          className="t-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${project.title} screenshot full size`}
+          onClick={() => setLightboxSrc(null)}
+        >
+          <button
+            type="button"
+            className="t-lightbox-close"
+            onClick={(e) => { e.stopPropagation(); setLightboxSrc(null); }}
+            autoFocus
+          >close</button>
+          <img
+            className="t-lightbox-img"
+            src={lightboxSrc}
+            alt={`${project.title} screenshot`}
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </main>
+  )
+}
