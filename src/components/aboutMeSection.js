@@ -11,10 +11,7 @@ export default function AboutMeSection() {
       <div className="t-section-head"><span className="n">01</span> about</div>
 
       <p>
-        I build AI agents and the tooling that keeps them honest. Currently at an <span className="highlight">FP&amp;A startup</span> in San Francisco, where I ship new agents, maintain evals, and build the add-ins that get our agents in front of actual users.
-      </p>
-      <p>
-        Before that I was at the <span className="highlight">UCSB Big Bee Lab</span>, where I built a multimodal entomology chatbot over thousands of pages of text, image, and tabular data. At the <span className="highlight">UCSB Alumni Association</span>, I automated hundreds of hours of manual data processing. I got my start in 2022 at <span className="highlight">Amotions AI</span>, migrating their no-code platform to a modern web stack and helping them land their first client.
+        Hi, I'm Bennett! I'm an AI Engineer in San Francisco, most recently working for a startup building AI agents for <span className="highlight">FP&amp;A</span>. I'm in charge of building new agents, maintaining evals, and building various add-ins to make our agents more accessible. I'm a recent UCSB graduate who previously worked at the <span className="highlight">UCSB "Big Bee" Lab</span>, where I built a multimodal entomology chatbot by indexing their massive database of text, image, and tabular data. At the <span className="highlight">UCSB Alumni Association</span>, I automated hundreds of hours of manual data processing, enabling time for more strategic initiatives. I also built and deployed a full-stack, AI-assisted document sharing app called <span className="highlight">Brainsink</span>. Before then, I got my start in 2022 helping <span className="highlight">Amotions AI</span> migrate their no-code platform to a modern web stack and secure their first client.
       </p>
       <p className="muted">
         Apart from studying SWE, ML, and AI, I do other cool stuff, too! This summer, I rode a motorcycle 200 miles around Vietnam. I'm a proud Eagle Scout. I've played Trombone at the Monterey Jazz Festival and played Euphonium at Carnegie Hall. I played D1 Rugby at UCSB, and last year my grandpa and I flew a single engine plane down to Mexico! I enjoy fishing, basketball, and piano. Thanks for checking out my site!
