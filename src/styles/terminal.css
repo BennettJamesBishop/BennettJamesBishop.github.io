@@ -185,23 +185,38 @@ img { max-width: 100%; display: block; }
 
 /* ─── FILMSTRIP ───────────────────────────────────────────── */
 .t-filmstrip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
+  overflow: hidden;
   background: var(--rule);
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
   margin: 48px 0 0;
+  --frame-w: calc((min(816px, 100vw - 64px) - 3px) / 4);
+  --frame-count: 4;
 }
+.t-filmstrip-track {
+  display: flex;
+  gap: 1px;
+  width: max-content;
+  animation: filmstrip-scroll 80s linear infinite;
+}
+.t-filmstrip-track:hover { animation-play-state: paused; }
 .t-filmstrip-frame {
+  flex: 0 0 var(--frame-w);
   aspect-ratio: 4/3;
   background: #222 center/cover no-repeat;
   filter: grayscale(.3) contrast(1.05);
   transition: filter .2s;
 }
 .t-filmstrip-frame:hover { filter: grayscale(0) contrast(1.1); }
+@keyframes filmstrip-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(calc(-1 * (var(--frame-w) + 1px) * var(--frame-count)), 0, 0); }
+}
 @media (max-width: 640px) {
-  .t-filmstrip { grid-template-columns: repeat(2, 1fr); }
+  .t-filmstrip { --frame-w: calc((100vw - 40px - 1px) / 2); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .t-filmstrip-track { animation: none; }
 }
 
 /* ─── PROJECTS FEED ───────────────────────────────────────── */
