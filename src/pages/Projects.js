@@ -6,6 +6,17 @@ function hostnameOf(url) {
   try { return new URL(url).hostname; } catch { return null; }
 }
 
+function toEmbedUrl(url) {
+  if (!url) return url;
+  const activity = url.match(/urn:li:activity:(\d+)/);
+  if (activity) return `https://www.linkedin.com/embed/feed/update/urn:li:activity:${activity[1]}`;
+  const ugc = url.match(/ugcPost[-:](\d+)/);
+  if (ugc) return `https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:${ugc[1]}`;
+  const share = url.match(/[-:]share[-:](\d+)/i);
+  if (share) return `https://www.linkedin.com/embed/feed/update/urn:li:share:${share[1]}`;
+  return url;
+}
+
 function sectionNumberer() {
   let n = 0;
   return () => String(++n).padStart(2, '0');
@@ -157,7 +168,7 @@ export default function Projects() {
             <iframe
               className="t-demo-iframe"
               title={project.demo.title}
-              src={project.demo.url}
+              src={toEmbedUrl(project.demo.url)}
               loading="lazy"
             />
           )}

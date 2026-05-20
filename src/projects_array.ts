@@ -60,7 +60,7 @@ export const projects_array: Projects_Array = [
     metric: 'helped close multiple >$100M ARR customers · grew usage 400%',
     demo: {
       title: "Payflow Platform Demo",
-      url: 'https://www.linkedin.com/posts/bennett-bishop_payflow-demo-payflow-demo-ugcPost-7404928123655532544-QCy4',
+      url: 'https://www.linkedin.com/feed/update/urn:li:activity:7404928529076875264/',
     },
     tools: [
       {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
