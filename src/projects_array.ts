@@ -43,6 +43,41 @@ type Projects_Array = Project[];
 
 export const projects_array: Projects_Array = [
 
+  //Payflow
+  {
+    slug: 'payflow',
+    title: 'Payflow',
+    subtitle: 'Founding AI Engineer at Payflow (YC S20), an AI platform for finance teams.',
+    type: 'Founding AI Engineer',
+    objective: 'Joined Payflow (YC S20) as a founding AI engineer, working as a forward-deployed engineer embedded directly with enterprise finance teams. The challenge: turn a narrow pandas-based prototype into a general-purpose AI platform that finance professionals at >$100M ARR companies could actually trust with their spreadsheets, decks, and reporting.',
+    results: [
+      {paragraph: 'Helped close multiple >$100M ARR customers by responding to user feedback within minutes and shipping requested features within 1–48 hours. Operating as a forward-deployed engineer meant building, demoing, and iterating live with finance teams until the product fit their workflow.'},
+      {paragraph: 'Expanded supported use cases from 1 to 100+ by replacing a brittle pandas-based workflow with a LangGraph agent capable of direct spreadsheet manipulation — preserving formulas and formatting for the first time.'},
+      {paragraph: 'Architected AI-powered add-ins for Excel, Google Sheets, PowerPoint, and Google Slides using React, TypeScript, Office.js, Apps Script, and Digital Ocean, growing usage by 400%.'},
+      {paragraph: 'Improved the accuracy of AI-generated financial charts and tables by 15% — and eliminated a third-party subscription — by building a custom generative UI library tailored to finance workflows.'},
+      {paragraph: 'Decreased AI error detection time by ~90% by building an LLM-as-a-judge and code-based evaluator framework with real-time Slack alerts after every production request, tracking financial accuracy and silent failures.'},
+    ],
+    metric: 'helped close multiple >$100M ARR customers · grew usage 400%',
+    demo: {
+      title: "Payflow Platform Demo",
+      url: 'https://www.linkedin.com/posts/bennett-bishop_payflow-demo-payflow-demo-ugcPost-7404928123655532544-QCy4',
+    },
+    tools: [
+      {name: 'Python', logo: `${process.env.PUBLIC_URL}/icons/Python.png`},
+      {name: 'React', logo: `${process.env.PUBLIC_URL}/icons/React.png`},
+      {name: 'TypeScript', logo: `${process.env.PUBLIC_URL}/icons/TypeScript.png`},
+      {name: 'LangGraph', logo: `${process.env.PUBLIC_URL}/icons/LangGraph.png`},
+    ],
+    images: [
+      {url: `${process.env.PUBLIC_URL}/payflow/payflow1.jpg`},
+    ],
+    links: [
+      {name: 'PowerPoint Agent Demo', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7422751990469832704/'},
+      {name: 'Sheets / Slides Demo', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7424512107993329665/'},
+    ],
+    date: 'Aug 2025 - Feb 2026',
+  },
+
   //ChatGBeeT
   {
     slug: 'chatgbeet',
