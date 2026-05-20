@@ -3,15 +3,15 @@ export default function AboutMeSection() {
     { src: 'aboutMe/tuna_pic.jpg', alt: 'Fishing trip' },
     { src: 'aboutMe/rugby_pic.jpg', alt: 'UCSB rugby' },
     { src: 'aboutMe/pyramids_pic.JPG', alt: 'Pyramids of Giza' },
-    { src: 'aboutMe/vietnam_pic.JPG', alt: 'Hà Giang Loop, Vietnam' },
+    { src: 'aboutMe/IMG_1623.JPG', alt: 'Photo' },
     { src: 'aboutMe/IMG_1466.jpg', alt: 'Photo' },
     { src: 'aboutMe/IMG_2497.PNG', alt: 'Photo' },
-    { src: 'aboutMe/IMG_0717.JPG', alt: 'Photo' },
+    { src: 'aboutMe/IMG_0572.JPG', alt: 'Photo' },
     { src: 'aboutMe/IMG_2789.JPG', alt: 'Photo' },
     { src: 'aboutMe/IMG_1127.jpg', alt: 'Photo' },
-    { src: 'aboutMe/IMG_0572.JPG', alt: 'Photo' },
+    { src: 'aboutMe/IMG_0717.JPG', alt: 'Photo' },
     { src: 'aboutMe/IMG_1975.jpg', alt: 'Photo' },
-    { src: 'aboutMe/IMG_1623.JPG', alt: 'Photo' },
+    { src: 'aboutMe/vietnam_pic.JPG', alt: 'Hà Giang Loop, Vietnam' },
   ]
 
   const reel = [...photos, ...photos]
