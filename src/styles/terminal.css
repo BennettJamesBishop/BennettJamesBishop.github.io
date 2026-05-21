@@ -199,15 +199,18 @@ img { max-width: 100%; display: block; }
   width: max-content;
   animation: filmstrip-scroll 80s linear infinite;
 }
-.t-filmstrip-track:hover { animation-play-state: paused; }
 .t-filmstrip-frame {
   flex: 0 0 var(--frame-w);
   aspect-ratio: 4/3;
   background: #222 center/cover no-repeat;
-  filter: grayscale(.3) contrast(1.05);
-  transition: filter .2s;
+  filter: contrast(1.05);
+  transition: filter .2s, transform .2s;
+  border: none;
+  padding: 0;
+  cursor: zoom-in;
 }
-.t-filmstrip-frame:hover { filter: grayscale(0) contrast(1.1); }
+.t-filmstrip-frame:hover { filter: contrast(1.1) brightness(1.05); }
+.t-filmstrip-frame:focus-visible { outline: 1px solid var(--accent); outline-offset: 2px; }
 @keyframes filmstrip-scroll {
   from { transform: translate3d(0, 0, 0); }
   to   { transform: translate3d(calc(-1 * (var(--frame-w) + 1px) * var(--frame-count)), 0, 0); }
