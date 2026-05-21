@@ -1,4 +1,20 @@
+import { useEffect, useState } from 'react'
+
 export default function AboutMeSection() {
+  const [lightboxPhoto, setLightboxPhoto] = useState(null)
+
+  useEffect(() => {
+    if (!lightboxPhoto) return
+    const onKey = (e) => { if (e.key === 'Escape') setLightboxPhoto(null) }
+    document.addEventListener('keydown', onKey)
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = prevOverflow
+    }
+  }, [lightboxPhoto])
+
   const photos = [
     { src: 'aboutMe/tuna_pic.jpg', alt: 'Fishing trip' },
     { src: 'aboutMe/rugby_pic.jpg', alt: 'UCSB rugby' },
@@ -30,16 +46,40 @@ export default function AboutMeSection() {
       <div className="t-filmstrip" style={{ '--frame-count': photos.length }}>
         <div className="t-filmstrip-track" aria-hidden="false">
           {reel.map((p, i) => (
-            <div
+            <button
+              type="button"
               key={`${p.src}-${i}`}
               className="t-filmstrip-frame"
               style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/${p.src})` }}
-              role="img"
-              aria-label={p.alt}
+              aria-label={`Expand ${p.alt}`}
+              onClick={() => setLightboxPhoto(p)}
             />
           ))}
         </div>
       </div>
+
+      {lightboxPhoto && (
+        <div
+          className="t-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${lightboxPhoto.alt} full size`}
+          onClick={() => setLightboxPhoto(null)}
+        >
+          <button
+            type="button"
+            className="t-lightbox-close"
+            onClick={(e) => { e.stopPropagation(); setLightboxPhoto(null) }}
+            autoFocus
+          >close</button>
+          <img
+            className="t-lightbox-img"
+            src={`${process.env.PUBLIC_URL}/${lightboxPhoto.src}`}
+            alt={lightboxPhoto.alt}
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   )
 }
