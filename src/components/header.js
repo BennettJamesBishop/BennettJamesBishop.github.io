@@ -5,8 +5,9 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'about', href: '/#about' },
-  { name: 'projects', href: '/#projects-section' },
+  { name: 'work', href: '/#work' },
+  { name: 'journal', href: '/#journal' },
+  { name: 'background', href: '/#projects-section' },
   { name: 'cv', href: '/BennettBishopResume.pdf', external: true },
   { name: 'github', href: 'https://github.com/BennettJamesBishop', external: true },
 ]

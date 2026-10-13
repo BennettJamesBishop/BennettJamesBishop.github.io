@@ -1,0 +1,219 @@
+{
+  "sourceUrl": "https://docs.google.com/document/d/1p3hIqTj9DrQzxjhnTCPWnO9xMEBPMVX6LdwWjpnrsJk/edit",
+  "title": "AI Safety Research Journal | Sep 21 2026– Present",
+  "entries": [
+    {
+      "id": "entry-october-11",
+      "title": "Aaron Sandoval’s Defer to Decompose and the limits of context resets",
+      "date": "2026-10-11",
+      "dateLabel": "October 11, 2026",
+      "paragraphs": [
+        "I spent much of today understanding LinuxArena as a possible experimental environment and reading Aaron Sandoval and James Lucassen’s draft, “Defer to Decompose: Controlling AI Agents by Clearing Context,” after Aaron replied to my outreach. He warned that his BashArena work overlaps substantially with my proposal, suggested a narrower derisking experiment rather than a similar broad LinuxArena study, and encouraged me to consider the Algoverse AI Safety Fellowship over its main program. I am leaning toward booking a call with him for Tuesday late morning and using Sunday and Monday to prepare targeted questions.",
+        "What I learned: DTD monitors proposed actions and, when one looks sufficiently suspicious, rejects it, terminates the current agent, and has a trusted decomposer create a child task for a successor. Its strong safety results relative to trusted monitoring do not establish that clearing context caused the improvement. In BashArena, the authors found no measurable benefit from limiting monitors to the current child-task context and no meaningful safety difference from sharing versus withholding an upfront attack plan. Their results point instead to rejection of suspicious actions as a major mechanism. They also compare DTD to defer-to-resample and discuss adding occasional random decompositions; their small derisking experiment tests usefulness cost (about five percentage points), not improved safety.",
+        "A striking lesson was that persistent files can act as external attack memory. Writing or editing a file is monitored, but a monitor may fail to recognize malicious functionality distributed among seemingly legitimate code. A successor can inspect those artifacts or independently start an attack anew. The paper’s findings therefore do not imply that no agent lost its plan; they show that losing the plan did not significantly reduce attack success under the tested conditions. I became more interested in identifying attacks that truly require hard-to-recover information accumulated over time.",
+        "Methodological questions: Section 2.3 deliberately gives the red team substantial knowledge of its environment and monitor, while the blue team is allowed to tune monitoring against observed attacks and include specific side-task patterns. The authors defend the former as a conservative approximation of a knowledgeable future adversary, but acknowledge that the latter makes the monitor less realistic and helps create a competitive experimental setting. The paper also automatically passes the initial decision to attack to successor agents, even when the actual attack plan is withheld, to simplify attack-selection evaluation. I want to revisit with a clear head whether those choices mask coordination difficulties and how they compare with my own design. Importantly, I verified my final proposal: every successor receives the same legitimate and adversarial objectives, plus its permitted handoff; the trusted summarizer alone is denied separately supplied original objectives and private reasoning.",
+        "Open questions to revisit later: What exactly did Aaron mean by “targeted derisking”? Could a smaller pilot isolate whether successful LinuxArena attacks require conversational information that cannot be rediscovered or retrieved from environmental state? Is preserving attack intent across resets the right control, or should attack-selection coordination be evaluated separately? Would a monitor without side-task-specific tuning change the result? Would comparing continuations from the same saved pre-reset state, with versus without history, be a cleaner test than a large five-handoff-policy sweep? How should pre-reset attack successes and legitimate-task usefulness be accounted for?",
+        "Milestone: Obtained and closely began studying Aaron’s unpublished 34-page manuscript; clarified major overlaps and differences with my contextual-discontinuity proposal; identified concrete questions to bring to a possible Tuesday call. No implementation has started yet."
+      ]
+    },
+    {
+      "id": "h.iqdseixokewc",
+      "title": "A concrete proposal and outreach",
+      "date": "2026-10-09",
+      "dateLabel": "October 9, 2026",
+      "paragraphs": [
+        "I refined Contextual Discontinuity and Long-Horizon Adversarial Coordination into a more disciplined experimental proposal. Key distinctions included conversational state versus handoff state versus environmental state, full-context attacker baselines, uninterrupted/restart controls, attacks occurring before the first reset, and separating absolute from relative outcomes. I drafted outreach to Redwood researchers, including Aryan and Tyler Tracy, and sent the Aryan message.",
+        "Open question: Is this a worthwhile Redwood-relevant direction? Should monitoring be tested immediately or as follow-on work? Will LinuxArena support the necessary attack trajectories?",
+        "Milestone: Completed a substantially revised proposal and began soliciting external feedback."
+      ]
+    },
+    {
+      "id": "h.6t7m28h004mj",
+      "title": "Diplomacy and contextual discontinuity",
+      "date": "2026-10-08",
+      "dateLabel": "October 8, 2026",
+      "paragraphs": [
+        "I drafted an outline about diplomatic coexistence with potentially self-preserving superintelligence, breaking the hypothetical future into periods defined by AI capability and dependence on human-maintained infrastructure. Separately, my empirical control proposal crystallized: periodically reset an agent's conversational context while preserving its task and environment, then measure attack success and honest usefulness. I debated whether monitoring belonged in the initial experiment.",
+        "Open question: Should the first experiment isolate resets mechanistically before combining them with monitoring and defer-to-trusted protocols? Can a handoff itself leak sufficient coordination state?",
+        "Milestone: Prepared a proposal around contextual discontinuity and long-horizon attacks."
+      ]
+    },
+    {
+      "id": "h.6u8f657v6s6t",
+      "title": "Networking and benchmark scrutiny",
+      "date": "2026-10-07",
+      "dateLabel": "October 7, 2026",
+      "paragraphs": [
+        "I prepared for the screening of We're Not Ready for SuperIntelligence and looked for people in AI safety to meet. In parallel, I kept wrestling with what makes an agent-control benchmark realistic: attack-policy prompts, model visibility, tool feedback, and how much useful legitimate work a protocol preserves.",
+        "Open question: How do I design a control experiment whose result is not an artifact of attacker instructions or benchmark scaffolding?",
+        "Milestone: Pursued connections with the research community while continuing technical diligence."
+      ]
+    },
+    {
+      "id": "h.lw3kzfhrzf9k",
+      "title": "Forced factored cognition becomes an experiment",
+      "date": "2026-10-06",
+      "dateLabel": "October 6, 2026",
+      "paragraphs": [
+        "I revisited Buck Shlegeris's suggestion that splitting work into isolated child tasks might disrupt multi-step adversarial coordination. I inspected the Factor(T,U) paper and its attack-policy and prompt design choices, including whether intentionally vague task decompositions might predetermine weak monitoring. I compared this idea with LinuxArena and thought about what honest-task usefulness would measure.",
+        "Open question: Would isolated subtasks actually break an attacker's coordination, or simply shift memory into handoff messages and the environment? What are the right baselines and prompts?",
+        "Milestone: Moved from broad interest in forced factored cognition toward a specific context-reset hypothesis."
+      ]
+    },
+    {
+      "id": "h.ugorybo71py",
+      "title": "Evolution, imitation, and terminal goals",
+      "date": "2026-10-05",
+      "dateLabel": "October 5, 2026",
+      "paragraphs": [
+        "I explored whether systems trained on human behavior could internalize something like human self-preservation as a terminal objective. I studied learned optimization, emergent agency, behavior cloning, world models, instrumental convergence, and the distinction between pretraining's next-token objective and a deployed agent's goals. The analogy to evolution seemed intriguing but required much stronger argumentation.",
+        "Open question: Why should imitating self-preserving organisms imply adopting self-preservation as a terminal goal, rather than merely modeling their behavior?",
+        "Milestone: Began articulating a separate philosophical research program around AI goals and human–AI diplomacy."
+      ]
+    },
+    {
+      "id": "h.y2ul9eg69kfn",
+      "title": "Does SGD favor deception?",
+      "date": "2026-10-04",
+      "dateLabel": "October 4, 2026",
+      "paragraphs": [
+        "I revisited the argument about whether SGD tends to find deceptive solutions when multiple parameter settings have similarly low loss. My takeaway was a question rather than a theorem: implicit biases and empirical evidence matter, but there is no settled universal rule that SGD either removes an unwanted preference or induces a concealed one. I asked how this differs from demonstrated alignment-faking behavior.",
+        "Open question: Which training conditions predict robust preference change, situational compliance, or strategic deception?",
+        "Milestone: Sharpened the distinction between observed deceptive behavior and a general claim about optimization's inductive bias."
+      ]
+    },
+    {
+      "id": "h.32fgdxjuy5oa",
+      "title": "Synthesis and unresolved training questions",
+      "date": "2026-10-03",
+      "dateLabel": "October 3, 2026",
+      "paragraphs": [
+        "I continued thinking about the gap between observable alignment and internal goals. A model's apparent compliance under the training distribution does not by itself establish robust generalization. The key concern was whether one can distinguish sincere behavioral change from conditional suppression with evaluations rather than intuition.",
+        "Open question: What experiment would cleanly separate preference replacement from preference concealment?",
+        "Note: Retrospective thematic reconstruction; no securely dated substantial conversation was recovered for this day."
+      ]
+    },
+    {
+      "id": "h.nkbu1x6fywf1",
+      "title": "Untrusted monitoring and adversarial visibility",
+      "date": "2026-10-02",
+      "dateLabel": "October 2, 2026",
+      "paragraphs": [
+        "I focused on untrusted monitors and the difficult tradeoff between their capability and their ability to collude with attacking agents. I asked why some evaluations let monitors see candidate side tasks, how anti-collusion transformations work, and whether masking or distorting inputs helps for the reason the paper claims.",
+        "Open question: In realistic deployment, what would the monitor actually know about side objectives, and how robust are published results to this visibility assumption?",
+        "Milestone: Began comparing monitoring design choices across the Redwood control papers."
+      ]
+    },
+    {
+      "id": "h.51h710qbie18",
+      "title": "From CoT signatures to latent mechanisms",
+      "date": "2026-10-01",
+      "dateLabel": "October 1, 2026",
+      "paragraphs": [
+        "I explored whether penalizing alignment-faking reasoning in chain-of-thought truly eliminates the strategy or merely makes its expression less legible. I learned the roles of probes, sparse autoencoders, activation patching, representation engineering, and causal circuit analysis. I also studied SGD's inductive bias: among many low-loss parameter solutions, which ones does optimization find?",
+        "Open question: If explicit deceptive reasoning disappears, where does any remaining strategy live, and can it be identified and causally removed?",
+        "Milestone: Framed a candidate empirical question about latent alignment-faking mechanisms."
+      ]
+    },
+    {
+      "id": "h.1zrvfbs2kuvn",
+      "title": "Mapping a research agenda",
+      "date": "2026-09-30",
+      "dateLabel": "September 30, 2026",
+      "paragraphs": [
+        "I organized several candidate directions: anti-collusion, untrusted monitoring, inductive bias, CoT alignment faking, forced factored cognition, and diplomacy. A unifying theme was whether dangerous intent or coordination can persist through apparently innocuous messages, weights, agent handoffs, or time.",
+        "Open question: Which of these directions offers a testable hypothesis and an attainable first experiment?",
+        "Milestone: Established a portfolio of research questions rather than a single vague fascination."
+      ]
+    },
+    {
+      "id": "h.frl93ujkj2nk",
+      "title": "Steganography, collusion, and threat models",
+      "date": "2026-09-29",
+      "dateLabel": "September 29, 2026",
+      "paragraphs": [
+        "I worked intensively through covert communication between agents: common knowledge, covertext, perfect-security assumptions, one-bit channels, one-time pads, and the conditions needed for covert collaboration. I examined Redwood's discussion of limiting or transforming monitor inputs and questioned which anti-collusion defenses were only suggested versus experimentally tested. I also tried formal logic for a human–AI diplomacy argument.",
+        "Open question: How much context can we strip from a monitor before we undermine its detection capabilities? Can information restrictions make collusion harder without sacrificing safety or usefulness?",
+        "Milestone: Began consolidating a structured glossary and paper map of AI Control, Ctrl-Z, BashArena, LinuxArena, and collusion."
+      ]
+    },
+    {
+      "id": "h.uzn3mqwljm4m",
+      "title": "Building an academic network",
+      "date": "2026-09-28",
+      "dateLabel": "September 28, 2026",
+      "paragraphs": [
+        "I drafted an email to my UCSB professor about the move into AI research, emphasizing AI Control and Alignment Faking. I also revisited how to formalize arguments about superintelligent AI, self-preservation, robots, and human–AI bargaining.",
+        "Open question: Which assumptions about intelligence, goals, dependence, and mutual vulnerability are empirical premises versus philosophical conjectures?",
+        "Milestone: Prepared faculty outreach and clarified the research interests I wanted to communicate."
+      ]
+    },
+    {
+      "id": "h.xf5crda8x1jl",
+      "title": "Alignment faking becomes a research interest",
+      "date": "2026-09-25",
+      "dateLabel": "September 25, 2026",
+      "paragraphs": [
+        "I examined the alignment-faking setup: apparent compliance during perceived training can protect a previously expressed preference. I distinguished being told about a training regime from actually performing RL, and asked whether reward models that evaluate reasoning rather than only outputs could reduce deception. I also began refreshing PPO, GRPO, and out-of-distribution generalization.",
+        "Open question: Does training remove a behavioral preference or teach context-dependent compliance?",
+        "Milestone: Identified CoT supervision and training-induced obfuscation as possible research directions."
+      ]
+    },
+    {
+      "id": "h.rayq01r50aee",
+      "title": "Clarifying adversarial evaluation",
+      "date": "2026-09-24",
+      "dateLabel": "September 24, 2026",
+      "paragraphs": [
+        "I continued consolidating the distinction between a defender protocol and an attacker policy. Auditing every task is unrealistic, but auditing an early fixed slice can invite delayed attacks. I tried to understand the attacker's actual visibility and why attacks must be evaluated against a specific protocol, not an imaginary omniscient adversary.",
+        "Open question: Which assumptions about attacker knowledge meaningfully change the evaluation?",
+        "Note: This entry synthesizes surrounding conversations; exact activity on this calendar date is less certain."
+      ]
+    },
+    {
+      "id": "h.bny4j6awbnj5",
+      "title": "AI Control and the safety–usefulness tradeoff",
+      "date": "2026-09-23",
+      "dateLabel": "September 23, 2026",
+      "paragraphs": [
+        "I worked through the original AI Control setup: red and blue teams, untrusted U, trusted T, expert auditing H, and the APPS backdoor threat model. The key measurement was not merely attack detection; it was preserving honest-task usefulness while lowering attack success. I clarified how usefulness is normalized between trusted-only and untrusted-only performance, and why upfront auditing is a meaningful but weak baseline.",
+        "Open question: How does the red-team attack policy know when to strike, especially if it cannot count how many tasks have been processed?",
+        "Milestone: Began building a working understanding of the control evaluation framework."
+      ]
+    },
+    {
+      "id": "h.fi3xm4zcx216",
+      "title": "Turning preparation into a plan",
+      "date": "2026-09-22",
+      "dateLabel": "September 22, 2026",
+      "paragraphs": [
+        "I worked on how to present my background for research engineering, revisiting transcript-backed courses in experiments, machine learning, statistics, logic, and philosophy of mind. I wanted my resume to communicate empirical competence rather than startup experience alone.",
+        "Open question: How can I show concrete research ability without an academic alignment publication?",
+        "Milestone: Identified relevant courses and refined my positioning for labs such as Redwood."
+      ]
+    },
+    {
+      "id": "h.b0q6hitir48y",
+      "title": "Committing to a research pivot",
+      "date": "2026-09-21",
+      "dateLabel": "September 21, 2026",
+      "paragraphs": [
+        "I began treating AI alignment and control as a serious career direction rather than a passing interest. With an AI engineering and statistics/philosophy background but no PhD, I explored a high-agency route into empirical work: learn the literature, reproduce evaluations, build a public project, and seek feedback from researchers. The initial candidate question was how much of an agent trajectory a monitor needs to see.",
+        "Open question: What research contribution can I make quickly that is both tractable and genuinely useful?",
+        "Milestone: Built a six-week, full-time research-learning plan."
+      ]
+    }
+  ],
+  "reflections": [
+    {
+      "id": "h.cqjiu2wwi0ci",
+      "title": "LOOKING BACK — OCTOBER 9",
+      "date": null,
+      "dateLabel": null,
+      "paragraphs": [
+        "The arc of the month: from learning the vocabulary and baseline protocols of AI Control, through the problems of collusion, deceptive alignment, and monitoring under partial observability, toward a concrete experimental study of whether contextual discontinuity disrupts long-horizon attacks. The strongest recurring concern is not just whether an attack can be noticed, but whether an adversarial strategy can persist and coordinate across limited windows of information, while legitimate task performance stays high.",
+        "Sources consulted: dated ChatGPT conversation records and summaries; Google Docs titled “AI Alignment & Control — Living Field Notes,” “Research Ideas,” and “All I know about AI Alignment + AI Control.”"
+      ]
+    }
+  ]
+}

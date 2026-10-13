@@ -86,6 +86,7 @@ export default function Projects() {
       </header>
 
       {project.images.length > 0 && (
+        <>
         <button
           type="button"
           className="t-img-expandable"
@@ -94,12 +95,14 @@ export default function Projects() {
         >
           <div
             className="t-hero-img"
-            style={{ backgroundImage: `url(${project.images[0].url})` }}
+            style={{ backgroundImage: `url(${project.images[0].url})`, aspectRatio: project.images[0].aspectRatio }}
             role="img"
-            aria-label={`${project.title} screenshot`}
+            aria-label={project.images[0].alt || `${project.title} screenshot`}
           />
           <span className="t-img-hint" aria-hidden="true">[ ⤢ expand ]</span>
         </button>
+        {project.images[0].caption && <p className="t-section-intro">{project.images[0].caption}</p>}
+        </>
       )}
 
       {project.images.length > 1 && (

@@ -1,0 +1,39 @@
+import { HashLink } from 'react-router-hash-link';
+import journal from '../journal.json';
+
+function Paragraph({ text }) {
+  const match = text.match(/^(Open question(?:s to revisit later)?|Milestone|Note|What I learned|Methodological questions|Sources consulted):\s*(.*)$/s);
+  return match ? <p><strong>{match[1]}:</strong> {match[2]}</p> : <p>{text}</p>;
+}
+
+export default function Journal() {
+  return (
+    <main className="t-wrap t-journal-page">
+      <HashLink to="/#journal">← Back to home</HashLink>
+      <h1>AI safety learning journal</h1>
+      <p className="t-section-intro">Notes on what I'm learning, what I'm questioning, and what comes next.</p>
+      <div className="t-journal-source">
+        <span>{journal.entries.length} entries · September–October 2026</span>
+        <a href={journal.sourceUrl} target="_blank" rel="noopener noreferrer">Read in Google Docs ↗</a>
+      </div>
+      <details className="t-journal-index">
+        <summary>Browse entries by date</summary>
+        <nav aria-label="Journal entries">
+          {journal.entries.map(entry => <HashLink key={entry.id} to={`/journal#${entry.id}`}><span>{entry.dateLabel}</span>{entry.title}</HashLink>)}
+        </nav>
+      </details>
+      {journal.entries.map(entry => (
+        <article className="t-journal-entry" id={entry.id} key={entry.id}>
+          <header><time dateTime={entry.date}>{entry.dateLabel}</time><h2>{entry.title}</h2></header>
+          {entry.paragraphs.map((text, index) => <Paragraph key={index} text={text} />)}
+        </article>
+      ))}
+      {journal.reflections.map(entry => (
+        <section className="t-journal-entry" key={entry.id}>
+          <h2>{entry.title}</h2>
+          {entry.paragraphs.map((text, index) => <Paragraph key={index} text={text} />)}
+        </section>
+      ))}
+    </main>
+  );
+}

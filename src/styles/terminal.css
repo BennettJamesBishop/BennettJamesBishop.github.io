@@ -575,3 +575,65 @@ img { max-width: 100%; display: block; }
   .t-dot { animation: none; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* AI control portfolio */
+:root { --fg-mute: #939393; }
+section[id] { scroll-margin-top: 76px; }
+.t-section-head { margin: 0; font-weight: 400; }
+.t-focus-statement { font-size: clamp(23px, 4vw, 32px); line-height: 1.4; letter-spacing: -.025em; max-width: 32ch; margin: 0 0 20px; }
+.t-placeholder { color: var(--fg-dim); }
+.t-interest-placeholder { max-width: 70ch; line-height: 1.8; margin: 0; }
+.t-interest-copy { max-width: 70ch; line-height: 1.8; }
+.t-interest-copy p { margin: 0 0 20px; }
+.t-interest-copy ul { list-style: disc; padding-left: 22px; margin: 0; }
+.t-interest-copy li { padding-left: 4px; margin-bottom: 20px; }
+.t-interest-copy li::marker { color: var(--accent); }
+.t-interest-copy a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.t-current-work { margin-top: 36px; padding: 26px 0 30px; border-top: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); }
+.t-work-title, .t-journal-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.t-work-title h3 { color: var(--accent); font-size: 14px; margin: 0; font-weight: 400; }
+.t-draft-label { color: var(--fg-dim); font-size: 11px; }
+.t-current-work h4 { font-size: 22px; font-weight: 500; line-height: 1.4; margin: 22px 0 12px; }
+.t-current-work p, .t-journal-preview p { max-width: 68ch; color: var(--fg-dim); line-height: 1.8; }
+.t-document-pending { display: inline-block; font-size: 12px; margin-top: 12px; }
+.t-journal-heading h3 { font-size: 21px; font-weight: 500; margin: 0; }
+.t-journal-heading a { color: var(--accent); font-size: 12px; }
+.t-section-intro { color: var(--fg-dim); max-width: 70ch; line-height: 1.8; margin: 14px 0 22px; }
+.t-journal-preview { padding: 22px 24px; background: var(--bg-2); }
+.t-journal-preview h4 { font-size: 16px; font-weight: 500; margin: 12px 0; }
+.t-journal-preview p:last-child { margin-bottom: 0; }
+.t-background .t-feed { margin-bottom: 0; }
+.t-background .t-feed-row { padding: 16px 0; gap: 18px; }
+.t-background .t-feed-row h3 { font-size: 14px; font-weight: 500; }
+.t-background .t-feed-row .t-date { font-size: 11px; }
+.t-journal-page { width: 100%; padding-top: 48px; padding-bottom: 64px; }
+.t-journal-page h1 { font-size: clamp(28px, 5vw, 40px); line-height: 1.2; letter-spacing: -.03em; margin: 36px 0 20px; }
+.t-journal-page h2 { font-size: 23px; margin: 20px 0 12px; }
+.t-journal-page h3 { font-size: 15px; margin-top: 32px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+@media (max-width: 640px) {
+  .t-journal-preview { padding: 20px; }
+  .t-current-work h4 { font-size: 19px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .t-cursor, .t-dot { animation: none; }
+}
+
+/* Native journal reading surface */
+.t-journal-source { display: flex; flex-wrap: wrap; gap: 12px 24px; color: var(--fg-dim); font-size: 12px; margin: 24px 0; }
+.t-journal-source a, .t-journal-read { color: var(--accent); }
+.t-journal-read { display: inline-block; margin-top: 16px; font-size: 12px; }
+.t-journal-index { border-top: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); padding: 20px 0; margin-bottom: 32px; }
+.t-journal-index summary { cursor: pointer; color: var(--fg); }
+.t-journal-index nav { display: grid; gap: 16px; padding-top: 24px; }
+.t-journal-index a { display: grid; grid-template-columns: 160px 1fr; gap: 12px; font-size: 12px; padding-bottom: 12px; }
+.t-journal-index a span { color: var(--fg-dim); }
+.t-journal-entry { scroll-margin-top: 88px; padding: 28px 24px; background: var(--bg-2); margin-bottom: 28px; }
+.t-journal-entry time { color: var(--accent); font-size: 12px; }
+.t-journal-entry h2 { line-height: 1.4; font-weight: 500; max-width: 36ch; }
+.t-journal-entry p { max-width: 70ch; line-height: 1.85; color: #b5b5b5; margin: 20px 0 0; overflow-wrap: anywhere; }
+.t-journal-entry strong { color: var(--fg); font-weight: 500; }
+@media (max-width: 640px) {
+  .t-journal-entry { padding: 24px 18px; }
+  .t-journal-index a { grid-template-columns: 1fr; gap: 4px; }
+}
