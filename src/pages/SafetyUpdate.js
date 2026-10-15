@@ -7,7 +7,13 @@ function SourceLink({ href, children }) {
 export default function SafetyUpdate() {
   return (
     <main className="t-wrap t-update-page">
-      <HashLink to="/#work">← Back to home</HashLink>
+      <nav className="t-crumb" aria-label="Breadcrumb">
+        <HashLink to="/" className="t-crumb-home">← Home</HashLink>
+        <span className="sep">/</span>
+        <HashLink to="/#work">updates</HashLink>
+        <span className="sep">/</span>
+        <span className="here" aria-current="page">october-2026</span>
+      </nav>
       <h1>October 2026 Update: Shifting focus to AI Safety</h1>
       <div className="t-interest-copy">
         <p>I've stepped away from fintech to focus on AI safety research. I’m motivated by a passion for protecting those around me and for helping the human race endure. I am also, conveniently, very entertained by the philosophical and technical problems which arise from AI Safety.</p>

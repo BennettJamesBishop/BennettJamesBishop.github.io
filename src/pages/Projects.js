@@ -62,7 +62,7 @@ export default function Projects() {
   return (
     <main className="t-wrap">
       <nav className="t-crumb" aria-label="Breadcrumb">
-        <Link to="/">~</Link>
+        <Link to="/" className="t-crumb-home">← Home</Link>
         <span className="sep">/</span>
         <Link to="/#projects-section">projects</Link>
         <span className="sep">/</span>

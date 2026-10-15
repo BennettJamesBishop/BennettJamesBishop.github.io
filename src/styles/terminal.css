@@ -303,7 +303,8 @@ img { max-width: 100%; display: block; }
 .t-crumb a:hover { color: var(--accent); }
 .t-crumb .sep { color: var(--rule-2); margin: 0 6px; }
 .t-crumb .here { color: var(--fg); }
-.t-crumb::before { content: "$ cd "; color: var(--accent); }
+.t-crumb .t-crumb-home { color: var(--accent); }
+.t-crumb .t-crumb-home:hover { text-decoration: underline; }
 
 .t-project-head {
   padding: 24px 0 40px;
