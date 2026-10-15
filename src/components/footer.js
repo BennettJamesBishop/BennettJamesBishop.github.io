@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <footer className="t-footer">
       <div className="t-wrap t-footer-inner">
-        <div className="left">end of stream · © {year}</div>
+        <div className="left">end of stream · © {year} Bennett Bishop</div>
         <div>
           <a href="https://github.com/BennettJamesBishop" target="_blank" rel="noopener noreferrer">github</a>
           {' · '}

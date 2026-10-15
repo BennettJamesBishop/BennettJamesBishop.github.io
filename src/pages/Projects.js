@@ -75,13 +75,7 @@ export default function Projects() {
         <div className="t-project-meta">
           <div className="field"><span className="k">date</span><span className="v">{project.date}</span></div>
           <span className="sep-dot">·</span>
-          <div className="field"><span className="k">type</span><span className="v">{project.type}</span></div>
-          {project.metric && (
-            <>
-              <span className="sep-dot">·</span>
-              <div className="field"><span className="k">status</span><span className="v green">shipped</span></div>
-            </>
-          )}
+          <div className="field"><span className="k">{['payflow', 'northstar'].includes(project.slug) ? 'role' : 'type'}</span><span className="v">{project.type}</span></div>
         </div>
       </header>
 

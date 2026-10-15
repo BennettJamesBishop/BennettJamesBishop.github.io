@@ -1,19 +1,54 @@
 {
-  "sourceUrl": "https://docs.google.com/document/d/1p3hIqTj9DrQzxjhnTCPWnO9xMEBPMVX6LdwWjpnrsJk/edit",
+  "sourceUrl": "https://docs.google.com/document/d/1svwC0bjjZ99Lh9bKJLdepIeHzv_NnDOHdqUte65ed5o/edit?usp=sharing",
   "title": "AI Safety Research Journal | Sep 21 2026– Present",
   "entries": [
     {
+      "id": "entry-october-14",
+      "title": "Deep LinuxArena reading and personal-site updates",
+      "date": "2026-10-14",
+      "dateLabel": "October 14, 2026",
+      "paragraphs": [
+        "I spent substantial time developing a deeper understanding of Redwood Research's LinuxArena paper, especially its monitoring methodology and Sections 5.1–5.4. I unpacked step-wise false positive rates, calibrated suspicion thresholds, probabilistic tie-breaking, and why a low per-action false positive rate can translate into frequent false alarms across long trajectories. I distinguished detection, successful undetected sabotage, and evasion rate, and considered why stronger attacker elicitation (including strategy documents) changes the interpretation of a monitor's measured safety.",
+        "The prototype-pollution example was especially useful for understanding the broader difficulty of detecting malicious effects spread across multiple apparently ordinary actions. I also revisited whether advanced attackers necessarily require comparably capable monitors; LinuxArena provides evidence relevant to this concern, but does not establish it as a general requirement.",
+        "Separately, I worked on updating my personal website to better reflect my current work and direction.",
+        "Open questions: Can context resets disrupt attacks distributed across steps? Can weaker monitors close the gap through better scaffolding or tools? How should trajectory length shape false-positive comparisons?",
+        "Milestones: Developed a much deeper understanding of LinuxArena; made progress updating my personal site."
+      ]
+    },
+    {
+      "id": "entry-october-13",
+      "title": "Research conversations and fellowship preparation",
+      "date": "2026-10-13",
+      "dateLabel": "October 13, 2026",
+      "paragraphs": [
+        "I had a productive conversation with Aaron Sandoval about my interests in AI control and the process of developing worthwhile empirical research. It gave me useful questions to reflect on as I refine my contextual-discontinuity project, particularly how to formulate a focused hypothesis, choose informative baselines, and explain what an experiment would actually establish.",
+        "I also researched AI safety fellowships and started gathering the information needed for applications, including the Anthropic AI Safety Fellowship. Preparing to apply is pushing me to clarify my research interests and communicate the value of my technical background alongside the work I'm now doing in alignment and control.",
+        "Open questions: What is the smallest convincing experiment I can execute? How should I present my research interests and early independent work in fellowship applications?",
+        "Milestones: Had a helpful research conversation; surveyed fellowship opportunities and began preparing applications."
+      ]
+    },
+    {
+      "id": "entry-october-12",
+      "title": "Attack coordination and experimental design",
+      "date": "2026-10-12",
+      "dateLabel": "October 12, 2026",
+      "paragraphs": [
+        "I continued examining my own proposal through the lens of attack coordination. I separated conversational state, handoff state, and environmental state, asking which kinds of information an adversarial agent could carry between steps. I also considered whether a successor might independently rediscover useful information rather than explicitly receive it from an earlier agent. That distinction matters: an unsuccessful defense might reflect recoverable environmental information, not necessarily a failure to erase conversational context.",
+        "Another question was how much advance knowledge the attacker should have. An unusually well-informed attacker may be less dependent on accumulated context, while a less-informed one might need to discover a vulnerability over time. I want to make these assumptions explicit before interpreting any experimental result.",
+        "Open questions: Can I identify attacks that require hard-to-recover discoveries? Should attacker knowledge be varied as a separate experimental condition?",
+        "Milestones: Refined the threat-model questions and outlined a narrower pilot focused on recoverable versus lost attack information."
+      ]
+    },
+    {
       "id": "entry-october-11",
-      "title": "Aaron Sandoval’s Defer to Decompose and the limits of context resets",
+      "title": "Refining my context-reset research question",
       "date": "2026-10-11",
       "dateLabel": "October 11, 2026",
       "paragraphs": [
-        "I spent much of today understanding LinuxArena as a possible experimental environment and reading Aaron Sandoval and James Lucassen’s draft, “Defer to Decompose: Controlling AI Agents by Clearing Context,” after Aaron replied to my outreach. He warned that his BashArena work overlaps substantially with my proposal, suggested a narrower derisking experiment rather than a similar broad LinuxArena study, and encouraged me to consider the Algoverse AI Safety Fellowship over its main program. I am leaning toward booking a call with him for Tuesday late morning and using Sunday and Monday to prepare targeted questions.",
-        "What I learned: DTD monitors proposed actions and, when one looks sufficiently suspicious, rejects it, terminates the current agent, and has a trusted decomposer create a child task for a successor. Its strong safety results relative to trusted monitoring do not establish that clearing context caused the improvement. In BashArena, the authors found no measurable benefit from limiting monitors to the current child-task context and no meaningful safety difference from sharing versus withholding an upfront attack plan. Their results point instead to rejection of suspicious actions as a major mechanism. They also compare DTD to defer-to-resample and discuss adding occasional random decompositions; their small derisking experiment tests usefulness cost (about five percentage points), not improved safety.",
-        "A striking lesson was that persistent files can act as external attack memory. Writing or editing a file is monitored, but a monitor may fail to recognize malicious functionality distributed among seemingly legitimate code. A successor can inspect those artifacts or independently start an attack anew. The paper’s findings therefore do not imply that no agent lost its plan; they show that losing the plan did not significantly reduce attack success under the tested conditions. I became more interested in identifying attacks that truly require hard-to-recover information accumulated over time.",
-        "Methodological questions: Section 2.3 deliberately gives the red team substantial knowledge of its environment and monitor, while the blue team is allowed to tune monitoring against observed attacks and include specific side-task patterns. The authors defend the former as a conservative approximation of a knowledgeable future adversary, but acknowledge that the latter makes the monitor less realistic and helps create a competitive experimental setting. The paper also automatically passes the initial decision to attack to successor agents, even when the actual attack plan is withheld, to simplify attack-selection evaluation. I want to revisit with a clear head whether those choices mask coordination difficulties and how they compare with my own design. Importantly, I verified my final proposal: every successor receives the same legitimate and adversarial objectives, plus its permitted handoff; the trusted summarizer alone is denied separately supplied original objectives and private reasoning.",
-        "Open questions to revisit later: What exactly did Aaron mean by “targeted derisking”? Could a smaller pilot isolate whether successful LinuxArena attacks require conversational information that cannot be rediscovered or retrieved from environmental state? Is preserving attack intent across resets the right control, or should attack-selection coordination be evaluated separately? Would a monitor without side-task-specific tuning change the result? Would comparing continuations from the same saved pre-reset state, with versus without history, be a cleaner test than a large five-handoff-policy sweep? How should pre-reset attack successes and legitimate-task usefulness be accounted for?",
-        "Milestone: Obtained and closely began studying Aaron’s unpublished 34-page manuscript; clarified major overlaps and differences with my contextual-discontinuity proposal; identified concrete questions to bring to a possible Tuesday call. No implementation has started yet."
+        "I spent time comparing my contextual-discontinuity proposal with broader ideas in AI control about dividing agent work into smaller pieces. The central question for me is whether resetting an agent's conversation actually interrupts long-horizon adversarial coordination, or whether the information needed to continue can be recovered elsewhere. Files, logs, tool outputs, and the task environment might act as external memory even after the conversation disappears.",
+        "I also started thinking about how to distinguish a mechanism from a package of interventions. If a control protocol changes several things at once, better outcomes do not automatically tell us which change was responsible. A cleaner experiment should isolate the effect I care about.",
+        "Open questions: Which attacks truly need persistent conversational memory? What comparison would isolate the effect of a reset while preserving useful work?",
+        "Milestones: Recognized important confounders in my proposal; began narrowing the hypothesis into a smaller, testable study."
       ]
     },
     {
@@ -22,7 +57,7 @@
       "date": "2026-10-09",
       "dateLabel": "October 9, 2026",
       "paragraphs": [
-        "I refined Contextual Discontinuity and Long-Horizon Adversarial Coordination into a more disciplined experimental proposal. Key distinctions included conversational state versus handoff state versus environmental state, full-context attacker baselines, uninterrupted/restart controls, attacks occurring before the first reset, and separating absolute from relative outcomes. I drafted outreach to Redwood researchers, including Aryan and Tyler Tracy, and sent the Aryan message.",
+        "I refined Contextual Discontinuity and Long-Horizon Adversarial Coordination into a more disciplined experimental proposal. Key distinctions included conversational state versus handoff state versus environmental state, full-context attacker baselines, uninterrupted/restart controls, attacks occurring before the first reset, and separating absolute from relative outcomes. I prepared outreach to AI control researchers and began requesting feedback on the proposal.",
         "Open question: Is this a worthwhile Redwood-relevant direction? Should monitoring be tested immediately or as follow-on work? Will LinuxArena support the necessary attack trajectories?",
         "Milestone: Completed a substantially revised proposal and began soliciting external feedback."
       ]
@@ -204,16 +239,5 @@
       ]
     }
   ],
-  "reflections": [
-    {
-      "id": "h.cqjiu2wwi0ci",
-      "title": "LOOKING BACK — OCTOBER 9",
-      "date": null,
-      "dateLabel": null,
-      "paragraphs": [
-        "The arc of the month: from learning the vocabulary and baseline protocols of AI Control, through the problems of collusion, deceptive alignment, and monitoring under partial observability, toward a concrete experimental study of whether contextual discontinuity disrupts long-horizon attacks. The strongest recurring concern is not just whether an attack can be noticed, but whether an adversarial strategy can persist and coordinate across limited windows of information, while legitimate task performance stays high.",
-        "Sources consulted: dated ChatGPT conversation records and summaries; Google Docs titled “AI Alignment & Control — Living Field Notes,” “Research Ideas,” and “All I know about AI Alignment + AI Control.”"
-      ]
-    }
-  ]
+  "reflections": []
 }

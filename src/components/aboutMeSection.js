@@ -37,7 +37,7 @@ export default function AboutMeSection() {
       <h2 className="t-section-head">outside of work</h2>
 
       <p className="muted">
-        Apart from studying SWE, ML, and AI, I do other cool stuff, too! This summer, I rode a motorcycle 200 miles around Vietnam. I'm a proud Eagle Scout. I've played Trombone at the Monterey Jazz Festival and played Euphonium at Carnegie Hall. I played D1 Rugby at UCSB, and last year my grandpa and I flew a single engine plane down to Mexico! I enjoy fishing, basketball, and piano. Thanks for checking out my site!
+        Outside of SWE, ML, and AI, I do other cool stuff, too! Last summer, I rode a motorcycle 200 miles around Vietnam. I'm a proud Eagle Scout. I've played euphonium at Carnegie Hall in NYC and trombone at the Monterey Jazz Festival. I also played D1 rugby at UCSB, and in 2024 my grandpa and I flew a single-engine plane down to Mexico! I enjoy fishing, basketball, and piano. Thanks for checking out my site!
       </p>
 
       <div className="t-filmstrip" style={{ '--frame-count': photos.length }}>
