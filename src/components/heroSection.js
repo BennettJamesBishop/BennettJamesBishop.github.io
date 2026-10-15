@@ -7,10 +7,9 @@ export default function HeroSection() {
             Bennett James<br />Bishop<span className="t-cursor" aria-hidden="true"></span>
           </h1>
           <div className="t-meta">
-            <div className="t-meta-row"><span className="k">role</span><span className="v">CEO / AI Engineer</span></div>
-            <div className="t-meta-row"><span className="k">company</span><span className="v">stealth</span></div>
-            <div className="t-meta-row"><span className="k">prev</span><span className="v">Payflow (YC S20) · UCSB Big Bee Lab · Amotions AI</span></div>
-            <div className="t-meta-row"><span className="k">stack</span><span className="v">Python · TypeScript · LangChain · Postgres · React</span></div>
+            <div className="t-meta-row"><span className="k">focus</span><span className="v green">AI control</span></div>
+            <div className="t-meta-row"><span className="k">role</span><span className="v">Independent Researcher</span></div>
+            <div className="t-meta-row"><span className="k">prev</span><span className="v">Northstar · Payflow (YC S20)</span></div>
           </div>
           <div className="t-hero-links">
             <a href={`${process.env.PUBLIC_URL}/BennettBishopResume.pdf`} download="BennettBishopResume.pdf">download cv</a>

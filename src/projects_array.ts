@@ -12,6 +12,9 @@ type Tool = {
 
 type Image = {
   url: string;
+  alt?: string;
+  caption?: string;
+  aspectRatio?: string;
 };
 
 type Link = {
@@ -42,6 +45,42 @@ type Project = {
 type Projects_Array = Project[];
 
 export const projects_array: Projects_Array = [
+
+  {
+    slug: 'northstar',
+    title: 'Northstar',
+    subtitle: 'CEO of Northstar. Built an AI-native data room for M&A diligence.',
+    type: 'CEO',
+    objective: 'M&A diligence is scattered across documents, email threads, calls, and request lists. I built Northstar to bring that evidence into one permission-aware workspace: matching sources to diligence requests, surfacing missing information, and answering questions with citations that deal teams could verify.',
+    metric: '6 design partners · 2 paying customers · live M&A deal usage',
+    results: [
+      {paragraph: 'I built the platform end to end and worked with my cofounder on product direction and customer discovery. The platform spanned a Next.js web application, an Electron desktop app for call capture, asynchronous processing pipelines, PostgreSQL and Redis services, and production infrastructure on AWS.'},
+      {paragraph: 'Conducted 200+ customer-discovery calls across 80+ companies, secured six design partners and two paying customers, and supported a live M&A deal with approximately three months of documents, emails, and calls from multiple teams.'},
+      {paragraph: 'Built ingestion and retrieval across PDFs, Word documents, spreadsheets, emails, and calls. The system connected evidence to active diligence requests and generated answers with page-, paragraph-, and spreadsheet-cell-level citations, while enforcing access permissions outside the model.'},
+      {paragraph: 'Built deterministic checks around model outputs: schema and identifier validation, source-quote verification, routing vetoes for conflicting deal evidence, and rejection of truncated outputs before persistence. Human rejections of AI-created evidence links were recorded durably so later model runs could not recreate them.'},
+      {paragraph: 'Built LLM evaluations using email and call cases to assess whether the system routed communications to the correct deal, matched them to the right diligence requests, and accurately extracted commitments. The evaluations tracked incorrect assignments, missed matches, and extraction errors to help assess where automation was reliable and where human review was needed.'},
+      {paragraph: 'Shipped tenant-scoped authorization, audit trails, encrypted storage and integration tokens, versioned database migrations, and gated deployment workflows.'},
+      {paragraph: 'One of Northstar’s biggest technical challenges was deciding which parts of M&A diligence needed model judgment and which could be handled by deterministic rules and routing logic. Running the company also gave me hands-on experience in sales, product iteration, and managing customer relationships.'},
+    ],
+    tools: [
+      {name: 'TypeScript', logo: ''},
+      {name: 'Next.js / React', logo: ''},
+      {name: 'Electron', logo: ''},
+      {name: 'PostgreSQL', logo: ''},
+      {name: 'Redis / BullMQ', logo: ''},
+      {name: 'AWS', logo: ''},
+      {name: 'Terraform', logo: ''},
+      {name: 'Vitest / Playwright', logo: ''},
+    ],
+    images: [{
+      url: `${process.env.PUBLIC_URL}/northstar/request-detail.png`,
+      alt: 'Northstar request detail showing an AI completeness assessment, mapped financial documents, activity history, and human review controls.',
+      caption: 'A diligence request with source-backed AI analysis, mapped documents, and a separate human review decision. Click to expand.',
+      aspectRatio: '2954 / 1734',
+    }],
+    links: [{name: 'Northstar website', link: 'https://northstarapp.ai/'}],
+    date: 'Feb 2026 - Sep 2026',
+  },
 
   //Payflow
   {
@@ -191,7 +230,7 @@ export const projects_array: Projects_Array = [
       type: 'Machine Learning App',
       objective:
         'My UFC ML Project (featured on my personal site, as well) was really fun to build, however I wanted to do more with my model. I became invested in creating an interactive app in which a user could match up two fighters and recieve both a calculated prediction of who would win as well as an AI generated explanation of the model\'s prediction.',
-      results: 
+      results:
         [
           {paragraph: 'It turns out I had already completed the real heavy work throughout the process of the original UFC ML Project. In order to create this app, I rewrote my most successful model from my UFC ML Project in Python (it was originally written in R), found a second data set containing fighter data, and utilized Streamlit.io in order to build/host the app.'},
           {paragraph: 'The app itself is pretty simple. The two drop down menus contain unique fighter names, corresponding to individual rows in the fighters data set. When a user presses “Predict Winner,” a data frame containing each fighter\'s data is passed into my ML Model, my model then returns a prediction as well as each fighter\'s probability of winning.'},
@@ -217,7 +256,7 @@ export const projects_array: Projects_Array = [
       ],
       date: 'July 2024',
     },
-    
+
     //UFC ML Project
     {
       slug: 'ufc-ml',
@@ -315,4 +354,4 @@ export const projects_array: Projects_Array = [
   //     date: 'Dec 2023',
   //   },
 ];
-  
+

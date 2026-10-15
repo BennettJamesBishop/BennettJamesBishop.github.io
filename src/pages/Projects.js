@@ -62,7 +62,7 @@ export default function Projects() {
   return (
     <main className="t-wrap">
       <nav className="t-crumb" aria-label="Breadcrumb">
-        <Link to="/">~</Link>
+        <Link to="/" className="t-crumb-home">← Home</Link>
         <span className="sep">/</span>
         <Link to="/#projects-section">projects</Link>
         <span className="sep">/</span>
@@ -75,17 +75,12 @@ export default function Projects() {
         <div className="t-project-meta">
           <div className="field"><span className="k">date</span><span className="v">{project.date}</span></div>
           <span className="sep-dot">·</span>
-          <div className="field"><span className="k">type</span><span className="v">{project.type}</span></div>
-          {project.metric && (
-            <>
-              <span className="sep-dot">·</span>
-              <div className="field"><span className="k">status</span><span className="v green">shipped</span></div>
-            </>
-          )}
+          <div className="field"><span className="k">{['payflow', 'northstar'].includes(project.slug) ? 'role' : 'type'}</span><span className="v">{project.type}</span></div>
         </div>
       </header>
 
       {project.images.length > 0 && (
+        <>
         <button
           type="button"
           className="t-img-expandable"
@@ -94,12 +89,14 @@ export default function Projects() {
         >
           <div
             className="t-hero-img"
-            style={{ backgroundImage: `url(${project.images[0].url})` }}
+            style={{ backgroundImage: `url(${project.images[0].url})`, aspectRatio: project.images[0].aspectRatio }}
             role="img"
-            aria-label={`${project.title} screenshot`}
+            aria-label={project.images[0].alt || `${project.title} screenshot`}
           />
           <span className="t-img-hint" aria-hidden="true">[ ⤢ expand ]</span>
         </button>
+        {project.images[0].caption && <p className="t-section-intro">{project.images[0].caption}</p>}
+        </>
       )}
 
       {project.images.length > 1 && (
