@@ -6,7 +6,7 @@ export default function ControlSection() {
       <h2 className="t-section-head">AI control</h2>
       <p className="t-focus-statement">October 2026 Update: Shifting focus to AI Safety</p>
       <p className="t-update-summary">I've stepped away from fintech to focus on AI safety research.</p>
-      <Link className="t-update-link" to="/updates/october-2026">Read update →</Link>
+      <Link className="t-update-link" to="/updates/october-2026">Why AI Safety? →</Link>
       <article className="t-current-work">
         <div className="t-work-title"><h3>Current work</h3><span className="t-wip-label">Work in progress</span></div>
         <h4>Contextual Discontinuity and Long-Horizon Adversarial Coordination</h4>
