@@ -8,6 +8,7 @@ const navigation = [
   { name: 'work', href: '/#work' },
   { name: 'journal', href: '/#journal' },
   { name: 'background', href: '/#projects-section' },
+  { name: 'outside of work', href: '/#about' },
   { name: 'cv', href: '/BennettBishopResume.pdf', external: true },
   { name: 'github', href: 'https://github.com/BennettJamesBishop', external: true },
 ]
