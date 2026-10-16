@@ -22,7 +22,7 @@ export default function SafetyUpdate() {
 
         <section className="t-update-topic">
           <h2>Context-Based Control Protocols</h2>
-          <p>I believe that protocols involving limiting, or resetting, an agent’s context might be promising. Specifically, exploiting attack coordination challenges via context resets might be a promising safety mechanism. I’ve got a <SourceLink href={`${process.env.PUBLIC_URL}/research/contextual-discontinuity-proposal-wip.pdf`}>research proposal (WIP) here</SourceLink>.</p>
+          <p>I believe that protocols involving limiting, or resetting, an agent’s context might be promising. Specifically, exploiting attack coordination challenges via context resets might be a promising safety mechanism. I’ve got a <HashLink to="/research/contextual-discontinuity">research proposal (WIP) here</HashLink>.</p>
           <div className="t-update-research">
             <h3>What does current research say?</h3>
             <p><SourceLink href="https://arxiv.org/abs/2512.02157">Factor(T,U)</SourceLink> found that decomposing tasks into isolated subtasks improved safety primarily due to simplicity benefits for monitors in the APPS coding setting, but did not establish that decomposition itself made attacks harder to execute in that setting. Forthcoming work by Sandoval and Lucassen found no evidence for attack coordination challenges in <SourceLink href="https://www.bash-arena.com/">BashArena</SourceLink>. Whether forced context loss can specifically disrupt long-horizon attack coordination, while preserving legitimate task performance, remains an open research question.</p>

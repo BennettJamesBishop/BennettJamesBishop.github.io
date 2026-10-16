@@ -657,3 +657,22 @@ section[id] { scroll-margin-top: 76px; }
 .t-update-research a { color: #a9cfb7; }
 .t-update-note { font-size: 12px; line-height: 1.8; color: #a3a3a3; }
 .t-interest-copy .t-update-closing { margin-top: 40px; }
+
+/* Research proposal follows the site's long-form article layout. */
+.t-proposal-meta { color: var(--fg-dim); line-height: 1.8; }
+.t-proposal-policies-heading { font-size: 16px; font-weight: 600; margin: 28px 0 12px; }
+.t-proposal-conditions { margin: 0 0 24px; }
+.t-proposal-conditions > div { padding: 16px 0; border-top: 1px solid var(--rule-2); }
+.t-proposal-conditions dt { display: inline; font-weight: 600; }
+.t-proposal-conditions dd { display: inline; margin: 0; font-size: 14px; }
+@media (min-width: 769px) {
+  .t-proposal-conditions dd { font-size: 13px; }
+}
+.t-proposal-references { list-style: decimal; padding-left: 24px; }
+.t-proposal-page section, .t-proposal-references li { scroll-margin-top: 80px; }
+.t-proposal-page sup { margin-left: 2px; }
+.t-mobile-panel { overflow-y: auto; }
+@media (min-width: 769px) and (max-width: 900px) {
+  .t-nav-links { gap: 18px; }
+  .t-nav-inner > .t-status { display: none; }
+}
