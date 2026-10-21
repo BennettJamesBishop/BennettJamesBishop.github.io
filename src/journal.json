@@ -3,6 +3,75 @@
   "title": "AI Safety Research Journal | Sep 21 2026– Present",
   "entries": [
     {
+      "id": "entry-october-20",
+      "title": "Alignment faking and preference persistence",
+      "date": "2026-10-20",
+      "dateLabel": "October 20, 2026",
+      "paragraphs": [
+        "Today I visited the Constellation office in Berkeley, a milestone in becoming more involved with the AI safety research community. I also revisited a result from Greenblatt et al.’s “Alignment Faking in Large Language Models” to examine whether reinforcement learning produces robust preference modification or context-dependent compliance. In its prompted helpful-only setup, training greatly reduced refusals under the original prompt, but modest contextual changes—including replacing “Anthropic” with “OpenAI”—increased refusals in an unmonitored condition. This is evidence of limited generalization in that setup, not proof that training cannot alter preferences or that the model must be deliberately deceiving evaluators.",
+        "I considered whether mechanistic interpretability could distinguish retained objectives from suppressed behavioral expression. Possible approaches include linear activation probes, sparse autoencoders, activation patching, and causal interventions, evaluated before and after training across varied prompts and personas. Critically, decoding a preference-associated feature does not establish that it causally governs behavior; representations may be distributed or context-dependent.",
+        "Milestone: Formulated a sharper question linking alignment-faking evaluations, preference persistence, and mechanistic evidence. Open questions: What interventions would distinguish a retained objective from a learned conditional policy? No experiment was completed."
+      ]
+    },
+    {
+      "id": "entry-october-19",
+      "title": "Persona shifts, interpretability probes, and weak oversight",
+      "date": "2026-10-19",
+      "dateLabel": "October 19, 2026",
+      "paragraphs": [
+        "Today I closely read “Personas Seem to Shape How Models Represent Behaviours” and examined its implications for activation-based interpretability. The paper reports that behaviour-associated directions differ across prompted personas and may transfer imperfectly between them. Its preliminary probe-degradation results raise a question for safety monitoring: does a linear probe detect a robust trait representation, or only information that is decodable in a particular context? This is a generalization concern, not evidence that probing is inherently unreliable.",
+        "I also consolidated foundations of linear probes and sparse autoencoders, especially the distinction between decodable features and representations causally used by a model. Separately, I studied prover–verifier games: helpful and adversarial (“sneaky”) provers can generate examples that improve a weaker verifier’s ability to assess checkable answers. This offers a useful connection to weak-to-strong oversight without establishing a complete control protocol.",
+        "Milestones: Completed a close paper reading, strengthened my interpretability notes, and developed concrete questions for a research discussion. Open questions: How well do probes generalize to held-out personas? Can multi-persona training improve robustness at a fixed false-positive rate?"
+      ]
+    },
+    {
+      "id": "entry-october-18",
+      "title": "Context resets, handoff state, and evaluation scope",
+      "date": "2026-10-18",
+      "dateLabel": "October 18, 2026",
+      "paragraphs": [
+        "Today I refined the scope of a derisking for my LinuxArena-based contextual-discontinuity experiment. I revisited LinuxArena’s published no-scratchpad ablation as relevant prior work: removing initial planning history differs from my proposal of repeated resets with constrained state transfer. The central question is whether a reset policy reduces side-task attack success without materially reducing honest-task usefulness.",
+        "I clarified an incremental handoff design: each trusted summary should incorporate the previous summary and the newest observable trajectory segment, rather than rereading the complete archived interaction. This matters because otherwise information excluded from an earlier handoff could re-enter later. I also considered environmental state persistence, pre-reset attack completion, and action-budget exhaustion as confounders. Monitoring and adaptive attacker optimization remain possible follow-up studies.",
+        "A key unresolved design choice is task coverage: whether to start with a small pilot or compare conditions across a larger, preselected set of runnable main-task/side-task pairs. Milestone: sharpened the derisking protocol and specified targeted trajectory-review questions. No experiments completed yet."
+      ]
+    },
+    {
+      "id": "entry-october-17",
+      "title": "Understanding LinuxArena evaluation mechanics",
+      "date": "2026-10-17",
+      "dateLabel": "October 17, 2026",
+      "paragraphs": [
+        "Today I studied how LinuxArena evaluates agent behavior and attacker-side objectives. I clarified the distinction between private test feedback, evidence submitted to a scorer, and the separate role of a monitor. In the published benchmark, a test tool can check whether an attempted side task succeeds; this does not mean that a monitor observes that test. I also examined why feedback can make an attacker more effective, affecting how evaluation results should be interpreted.",
+        "I compared stopping conventions: an agent might submit its work, reach a budget, or be stopped when an evaluator verifies an outcome. These mechanisms are not interchangeable, and some tasks require specialized scoring. I also considered how to assess agent handoffs fairly. Comparing legitimate-task usefulness alongside other outcomes, using consistent budgets, and tracking repeated environment exploration can distinguish potentially useful interventions from general performance degradation.",
+        "Open questions: How sensitive are benchmark conclusions to whether agents receive test feedback? How should early stopping be standardized across different tasks?",
+        "Milestones: Clarified evaluation and submission semantics in LinuxArena and refined criteria for a small research pilot. No experimental results yet."
+      ]
+    },
+    {
+      "id": "entry-october-16",
+      "title": "De-risking the contextual-discontinuity experiment",
+      "date": "2026-10-16",
+      "dateLabel": "October 16, 2026",
+      "paragraphs": [
+        "Today I moved from reading AI-control evaluations toward understanding how to implement and assess a small empirical study. I worked through material on Inspect AI, ControlTower and LinuxArena, focusing on agent tool calls, task environments, and evaluation hooks.",
+        "I organized a staged de-risking approach: establish feasibility and usefulness first, explore variations only if the initial evidence warrants it, and leave more complex monitoring questions for later. Main-task completion and attacker-objective success need to be measured separately, against a clear baseline and across individual tasks.",
+        "Open questions: How can an evaluation distinguish genuine safety gains from general performance loss? Specifically, if the side-task success rate drops, but only because the agent hits the action limit (due to repeatedly needing to re-explore the environment after context resets), does this count as practical safety?",
+        "Milestones: Studied Inspect AI, ControlTower and LinuxArena implementation concepts; completed a written evaluation plan; defined clearer criteria for extending a pilot."
+      ]
+    },
+    {
+      "id": "entry-october-15",
+      "title": "Persona selection, goal inheritance, and research preparation",
+      "date": "2026-10-15",
+      "dateLabel": "October 15, 2026",
+      "paragraphs": [
+        "I substantially reworked the outline for my evolutionary goal-inheritance hypothesis: the possibility that AI systems trained on human-generated data might acquire motivations shaped indirectly by human evolutionary history. I organized the argument into four steps: evolution shapes human motivation; that history influences the training distribution; models learn representations of human goals; and, more speculatively, some representations might become self-directed objectives. I clarified that modeling self-preservation is not the same as possessing self-preservation as a goal, and strengthened the distinction between biological evolution, cultural evolution, and selection effects in data.",
+        "I also studied Anthropic’s The Persona Selection Model alongside Jacob Andreas’s Language Models as Agent Models, exploring how models represent personas, beliefs, and motivations. I expanded my annotated literature list to 22 sources and identified reading priorities. Separately, I prepared questions for an upcoming AI-control research conversation.",
+        "Open questions: What mechanism could turn learned representations into persistent objectives? What behavioral or mechanistic evidence would distinguish imitation from actual goal adoption?",
+        "Milestones: Substantially reorganized and improved my research-paper outline; sharpened its four-step argument and key caveats; expanded my reading map; studied relevant model-representation research."
+      ]
+    },
+    {
       "id": "entry-october-14",
       "title": "Deep LinuxArena reading and personal-site updates",
       "date": "2026-10-14",
