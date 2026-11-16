@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'work', href: '/#work' },
-  { name: 'journal', href: '/#journal' },
+  // { name: 'journal', href: '/#journal' },
   { name: 'background', href: '/#projects-section' },
   { name: 'outside of work', href: '/#about' },
   { name: 'cv', href: '/BennettBishopResume.pdf', external: true },
